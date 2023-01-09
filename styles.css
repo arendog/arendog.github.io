@@ -18,8 +18,7 @@
     left: 0;
     width: 300px;
     height: 100%;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding: 50px;
     text-align: left;
 }
 
@@ -37,6 +36,24 @@
     margin-bottom: 10px;
 }
 
+
+.socials {
+    position: absolute;
+    bottom: 50px;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials span {
+    margin: 20px 0px; 
+    float: left;
+    border-color: black;
+    border-width: 2px;  
+}
 
 
 * {
@@ -67,7 +84,7 @@ footer {
     position: absolute;
     bottom: 0;
     font-family: monospace;
-    z-index: 2;
+    z-index: 10;
     line-height: 0;
     padding: 12px;
 }
@@ -97,3 +114,4 @@ a:visited:hover {
     background-color: #551A8B;
     color: #fff;
 }
+
