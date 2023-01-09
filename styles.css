@@ -9,138 +9,6 @@
 }
 
 
-.socials {
-    z-index: 2;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav {
-    color: #303030;
-    font-size: 20px;
-    font-family: compagnonItalic, Verdana, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    z-index: 2;
-}
-
-
-.content {
-    position: absolute;
-    padding: 20px;
-    text-align: left;
-}
-
-.sidebar {
-    background-color: #f0dfdf;
-}
-
-
-@media screen and ((min-width: 801px) or (min-device-width:801px)) {
-    /*Desktop*/
-    @media screen and ((min-width:1281px) or (min-device-width:1281px)) {
-        .sidebar {
-            width: 300px;
-            padding: 50px;
-        }
-
-        .content {
-            left: 300px;
-        }
-
-        .socials {
-            bottom: 35px;
-            width: 200px;
-            flex-direction: row;
-        }
-    }
-
-    /*Tablet*/
-    @media screen and not ((min-width:1025px) or (min-device-width:1025px)) {
-        .sidebar {
-            width: 150px;
-            padding: 20px;
-        }
-
-        .content {
-            left: 150px;
-        }
-
-        .socials {
-            bottom: 100px;
-            height: 200px;
-            flex-direction: column;
-            padding-left: 34px;
-        }
-    }
-
-    .socials {
-        position: absolute;
-    }
-
-
-    .sidebar {
-        /*background-image: linear-gradient(to bottom right, #f0dfdf, #d6c3c3);*/
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        height: 100%;
-        text-align: left;
-    }
-
-    .nav > a {
-        display: inline-block;
-    }
-
-    .grid-container {
-      display: grid;
-
-      grid-template-columns: auto auto auto auto;
-      gap: 10px;
-      background-color: transparent;
-      padding: 0px;
-    }
-
-    .grid-container > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 1px solid black;
-      text-align: center;
-      font-size: 30px;
-    }
-}
-
-/*Mobile*/
-@media screen and not (min-width: 801px) {
-    .nav > a {
-        display: inline;
-    }
-
-    .sidebar {
-        position: absolute;
-        width: 100%;
-        padding: 35px;
-        text-align: center;
-        height: 185px;
-    }
-
-    .socials {
-        left: 25%;
-        width: 50%;
-        flex-direction: row;
-        margin-top: 50px;
-        position: relative;
-    }
-
-    .content {
-        left: 0;
-        top: 200px;
-    }
-}
-
-
 
 
 * {
@@ -213,3 +81,140 @@ a:visited:hover {
 .socials span {
     margin: 0;
 }
+
+
+
+.nav {
+    color: #303030;
+    font-size: 20px;
+    font-family: compagnonItalic, Verdana, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+
+.content {
+    position: absolute;
+    padding: 20px;
+    text-align: left;
+}
+
+.sidebar {
+    background-color: #f0dfdf;
+}
+
+
+.socials {
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+@media screen and ((min-width: 801px) or (min-device-width:801px)) {
+    /*Desktop*/
+    @media screen and ((min-width:1281px) or (min-device-width:1281px)) {
+        .sidebar {
+            width: 300px;
+            padding: 50px;
+        }
+
+        .content {
+            left: 300px;
+        }
+
+        .socials {
+            bottom: 35px;
+            width: 200px;
+            flex-direction: row;
+        }
+    }
+
+    /*Tablet*/
+    @media screen and not (min-width:1025px) {
+        .sidebar {
+            width: 150px;
+            padding: 20px;
+        }
+
+        .content {
+            left: 150px;
+        }
+
+        .socials {
+            bottom: 100px;
+            height: 200px;
+            flex-direction: column;
+            padding-left: 34px;
+        }
+    }
+
+    .socials {
+        position: absolute;
+    }
+
+
+    .sidebar {
+        /*background-image: linear-gradient(to bottom right, #f0dfdf, #d6c3c3);*/
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        text-align: left;
+    }
+
+    .nav > a {
+        display: inline-block;
+    }
+
+    .grid-container {
+      display: grid;
+
+      grid-template-columns: auto auto auto auto;
+      gap: 10px;
+      background-color: transparent;
+      padding: 0px;
+    }
+
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid black;
+      text-align: center;
+      font-size: 30px;
+    }
+}
+
+/*Mobile*/
+@media screen and not ((min-width: 801px) or (min-device-width:801px)) {
+    .nav > a {
+        display: inline;
+    }
+
+    .sidebar {
+        position: absolute;
+        width: 100%;
+        padding: 35px;
+        text-align: center;
+        height: 185px;
+    }
+
+    .socials {
+        left: 25%;
+        width: 50%;
+        flex-direction: row;
+        top: 20px;
+        position: relative;
+    }
+
+    .content {
+        left: 0;
+        top: 200px;
+    }
+}
+
