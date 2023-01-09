@@ -10,7 +10,7 @@
 
 
 .socials {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     margin: 0;
     padding: 0;
@@ -18,14 +18,37 @@
     justify-content: space-between;
 }
 
+.nav {
+    color: #303030;
+    font-size: 20px;
+    font-family: compagnonItalic, Verdana, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
 
+
+.content {
+    position: absolute;
+    padding: 20px;
+    text-align: left;
+}
+
+.sidebar {
+    background-color: #f0dfdf;
+}
 
 
 @media screen and (min-width: 801px) {
+    /*Desktop*/
     @media screen and (min-width:1025px) {
         .sidebar {
             width: 300px;
             padding: 50px;
+        }
+
+        .content {
+            left: 300px;
         }
 
         .socials {
@@ -35,11 +58,15 @@
         }
     }
 
-
+    /*Tablet*/
     @media screen and not (min-width:1025px) {
         .sidebar {
             width: 150px;
             padding: 20px;
+        }
+
+        .content {
+            left: 150px;
         }
 
         .socials {
@@ -53,7 +80,6 @@
 
 
     .sidebar {
-        background-color: #f0dfdf;
         /*background-image: linear-gradient(to bottom right, #f0dfdf, #d6c3c3);*/
         position: fixed;
         z-index: 1;
@@ -63,21 +89,9 @@
         text-align: left;
     }
 
-    .content {
-        position: fixed;
-        left: 300px;
-        padding: 20px;
-        text-align: left;
+    .nav > a {
+        display: inline-block;
     }
-
-
-    .socials span {
-        margin: 20px 0px; 
-        float: left;
-        border-color: black;
-        border-width: 2px;
-    }
-
 
     .grid-container {
       display: grid;
@@ -95,6 +109,35 @@
       font-size: 30px;
     }
 }
+
+/*Mobile*/
+@media screen and not (min-width: 801px) {
+    .nav > a {
+        display: inline;
+    }
+
+    .sidebar {
+        position: absolute;
+        width: 100%;
+        padding: 35px;
+        text-align: center;
+        height: 200px;
+    }
+
+    .socials {
+        left: 25%;
+        width: 50%;
+        flex-direction: row;
+        margin-top: 25px;
+    }
+
+    .content {
+        left: 0;
+        top: 200px;
+    }
+}
+
+
 
 
 * {
@@ -130,6 +173,7 @@ footer {
     padding: 12px;
 }
 
+
 a:link {
     color: #0000EE;
     background-color: transparent;
@@ -158,8 +202,11 @@ a:visited:hover {
 
 .name {
     color: #303030;
-    text-align: left;
     font-size: 24px;
     font-family: compagnonMedium, Verdana, Arial, sans-serif;
     margin-bottom: 10px;
+}
+
+.socials span {
+    margin: 0;
 }
