@@ -9,52 +9,91 @@
 }
 
 
-
-.sidebar {
-    background-color: #f0dfdf;
-    /*background-image: linear-gradient(to bottom right, #f0dfdf, #d6c3c3);*/
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100%;
-    padding: 50px;
-    text-align: left;
-}
-
-.content {
-    position: fixed;
-    left: 300px;
-    padding: 20px;
-    text-align: left;
-}
-
-.name {
-    color: #303030;
-    text-align: left;
-    font-size: 24px;
-    font-family: compagnonMedium, Verdana, Arial, sans-serif;
-    margin-bottom: 10px;
-}
-
-
 .socials {
     position: absolute;
-    bottom: 35px;
     z-index: 2;
     margin: 0;
     padding: 0;
-    width: 200px;
     display: flex;
     justify-content: space-between;
 }
 
-.socials span {
-    margin: 20px 0px; 
-    float: left;
-    border-color: black;
-    border-width: 2px;  
+
+
+
+@media screen and (min-width: 801px) {
+    @media screen and (min-width:1025px) {
+        .sidebar {
+            width: 300px;
+            padding: 50px;
+        }
+
+        .socials {
+            bottom: 35px;
+            width: 200px;
+            flex-direction: row;
+        }
+    }
+
+
+    @media screen and not (min-width:1025px) {
+        .sidebar {
+            width: 150px;
+            padding: 20px;
+        }
+
+        .socials {
+            bottom: 100px;
+            height: 200px;
+            flex-direction: column;
+            padding-left: 34px;
+        }
+    }
+
+
+
+    .sidebar {
+        background-color: #f0dfdf;
+        /*background-image: linear-gradient(to bottom right, #f0dfdf, #d6c3c3);*/
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        text-align: left;
+    }
+
+    .content {
+        position: fixed;
+        left: 300px;
+        padding: 20px;
+        text-align: left;
+    }
+
+
+    .socials span {
+        margin: 20px 0px; 
+        float: left;
+        border-color: black;
+        border-width: 2px;
+    }
+
+
+    .grid-container {
+      display: grid;
+
+      grid-template-columns: auto auto auto auto;
+      gap: 10px;
+      background-color: transparent;
+      padding: 0px;
+    }
+
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid black;
+      text-align: center;
+      font-size: 30px;
+    }
 }
 
 
@@ -117,3 +156,10 @@ a:visited:hover {
     color: #fff;
 }
 
+.name {
+    color: #303030;
+    text-align: left;
+    font-size: 24px;
+    font-family: compagnonMedium, Verdana, Arial, sans-serif;
+    margin-bottom: 10px;
+}
