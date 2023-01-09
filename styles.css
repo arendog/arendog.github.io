@@ -55,15 +55,14 @@ footer {
     z-index: 10;
     line-height: 0;
     padding: 12px;
-    text-align: center;
 }
 
 
 a:link {
     color: #0000EE;
     background-color: transparent;
-    transition: background-color 0.5s ease;
-    transition: color 0.1s ease;
+    transition: background-color 0.8s ease;
+    transition: color 0.2s ease;
     border-radius: 3px;
 }
 
@@ -75,8 +74,8 @@ a:link:hover {
 a:visited {
     color: #551A8B;
     background-color: transparent;
-    transition: background-color 0.5s ease;
-    transition: color 0.1s ease;
+    transition: background-color 0.8s ease;
+    transition: color 0.2s ease;
     border-radius: 3px;
 }
 
@@ -84,8 +83,6 @@ a:visited:hover {
     background-color: #551A8B;
     color: #fff;
 }
-
-
 
 
 
@@ -97,25 +94,38 @@ a:visited:hover {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height:100vh;
 }
 
-.content {
-    grid-area: main;
-    padding: 1em;
-}
+#entry1 { grid-area:main1 }
+#entry2 { grid-area:main2 }
+#entry3 { grid-area:main3 }
+#entry4 { grid-area:main4 }
+#entry5 { grid-area:main5 }
+#entry6 { grid-area:main6 }
+#entry7 { grid-area:main7 }
+#entry8 { grid-area:main8 }
+#entry9 { grid-area:main9 }
+#entry10 { grid-area:main10 }
+#entry11 { grid-area:main11 }
+#entry12 { grid-area:main12 }
+#entry13 { grid-area:main13 }
+#entry14 { grid-area:main14 }
+#entry15 { grid-area:main15 }
+#entry16 { grid-area:main16 }
+
 
 
 .grid-container {
     display: grid;
     grid-template-areas:
-        'menu main main main main'
-        'menu main main main main'
-        'menu main main main main'
-        'menu main main main main';
+        'menu main1 main2 main3 main4'
+        'menu main5 main6 main7 main8'
+        'menu main9 main10 main11 main12'
+        'menu main13 main14 main15 main16';
     grid-auto-columns: minmax(0, 1fr);
+    grid-auto-rows: minmax(0, 1fr);
     grid-auto-flow: column;
-    gap: 0;
+    gap: 0.25em;
     background-color: transparent;
     width: 100vw;
     height: 100vh;
@@ -143,4 +153,11 @@ a:visited:hover {
     text-decoration:inherit;
     background-color:inherit;
     color: inherit;
+}
+
+#preview {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
