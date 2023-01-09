@@ -10,7 +10,6 @@
 
 
 .socials {
-    position: fixed;
     z-index: 2;
     margin: 0;
     padding: 0;
@@ -77,6 +76,9 @@
         }
     }
 
+    .socials {
+        position: absolute;
+    }
 
 
     .sidebar {
@@ -121,14 +123,15 @@
         width: 100%;
         padding: 35px;
         text-align: center;
-        height: 200px;
+        height: 185px;
     }
 
     .socials {
         left: 25%;
         width: 50%;
         flex-direction: row;
-        margin-top: 25px;
+        margin-top: 50px;
+        position: relative;
     }
 
     .content {
