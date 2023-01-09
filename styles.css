@@ -11,7 +11,7 @@
 
 
 .sidebar {
-    background-image: linear-gradient(to bottom right, #a6e0df, #8dc4c3);
+    background-image: linear-gradient(to bottom right, #f0dfdf, #d6c3c3);
     position: fixed;
     z-index: 1;
     top: 0;
@@ -23,9 +23,10 @@
 }
 
 .content {
-
-    margin-left: 200px;
-    padding-left: 20px;
+    position: fixed;
+    left: 300px;
+    padding: 20px;
+    text-align: left;
 }
 
 .name {
@@ -39,7 +40,7 @@
 
 .socials {
     position: absolute;
-    bottom: 50px;
+    bottom: 35px;
     z-index: 2;
     margin: 0;
     padding: 0;
