@@ -1,0 +1,99 @@
+@font-face {
+   font-family: compagnonMedium;
+   src: url(fonts/compagnon-medium.woff);
+}
+
+@font-face {
+   font-family: compagnonItalic;
+   src: url(fonts/compagnon-italic.woff);
+}
+
+
+
+.sidebar {
+    background-image: linear-gradient(to bottom right, #a6e0df, #8dc4c3);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.content {
+
+    margin-left: 200px;
+    padding-left: 20px;
+}
+
+.name {
+    color: #303030;
+    text-align: left;
+    font-size: 24px;
+    font-family: compagnonMedium, Verdana, Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h3 {
+    color: #303030;
+    font-size: 20px;
+    font-family: compagnonMedium, Verdana, Arial, sans-serif;
+    margin: 0;
+}
+
+p {
+    color: #303030;
+    font-size: 20px;
+    font-family: compagnonItalic, Verdana, Arial, sans-serif;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    font-size: 11;
+    position: absolute;
+    bottom: 0;
+    font-family: monospace;
+    z-index: 2;
+    line-height: 0;
+    padding: 12px;
+}
+
+a:link {
+    color: #0000EE;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    transition: color 0.1s ease;
+    border-radius: 3px;
+}
+
+a:link:hover {
+    background-color: #0000EE;
+    color: #fff;
+}
+
+a:visited {
+    color: #551A8B;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    transition: color 0.1s ease;
+    border-radius: 3px;
+}
+
+a:visited:hover {
+    background-color: #551A8B;
+    color: #fff;
+}
