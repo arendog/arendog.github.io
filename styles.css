@@ -39,9 +39,9 @@
 }
 
 
-@media screen and (min-width: 801px) {
+@media screen and ((min-width: 801px) or (min-device-width:801px)) {
     /*Desktop*/
-    @media screen and (min-width:1025px) {
+    @media screen and ((min-width:1281px) or (min-device-width:1281px)) {
         .sidebar {
             width: 300px;
             padding: 50px;
@@ -59,7 +59,7 @@
     }
 
     /*Tablet*/
-    @media screen and not (min-width:1025px) {
+    @media screen and not ((min-width:1025px) or (min-device-width:1025px)) {
         .sidebar {
             width: 150px;
             padding: 20px;
