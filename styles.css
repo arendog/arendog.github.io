@@ -50,6 +50,15 @@ h1 {
     padding:0;
 }
 
+p {
+    color: #000;
+    font-size: 1em;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/*
 footer {
     width: 100%;
     font-size: 0.75em;
@@ -60,7 +69,7 @@ footer {
     line-height: 0;
     padding: 18px;
 }
-
+*/
 
 a:link {
     color: #0000EE;
@@ -101,13 +110,14 @@ a:visited:hover {
     );
     text-align: center;
     padding: 2em;
+    padding-bottom: 1em;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
 
-.content-container, .sidebar {
+.content-container, .sidebar, .content-block {
     border: 1px #000 solid;
     box-shadow: 2px 2px;
 }
@@ -159,6 +169,12 @@ a:visited:hover {
 #entry15 { grid-area:main15 }
 #entry16 { grid-area:main16 }*/
 
+.content-block {
+    grid-area: main;
+    padding: 2em;
+    background-color: #fff;
+    overflow: hidden;
+}
 
 .grid-container {
     display: grid;
@@ -172,7 +188,7 @@ a:visited:hover {
     grid-auto-flow: column;
     gap: 0.5em;
     background-color: transparent;
-    width: 100vw;
+    width: 100vw - 0.5em;
     height: 100vh;
 }
 
@@ -205,7 +221,44 @@ a:visited:hover {
     filter: initial;
 }
 
+#block-layout {
+    grid-template-areas:
+        'menu main right';
+    grid-template-columns: 18em min(48em, 100vw - 19em) 1fr;
+}
+
 .content-container:hover > a > #preview {
     background-color: #fff;
     filter: blur(2px) opacity(50%) saturate(0%);
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-areas:
+            'menu menu menu menu'
+            'main1 main2 main3 main4'
+            'main5 main6 main7 main8'
+            'main9 main10 main11 main12'
+            'main13 main14 main15 main16';
+        grid-template-columns: initial;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-rows: initial;
+        grid-template-rows: 11em repeat(4, 10em);
+        height: 100em;
+    }
+
+    #block-layout {
+        grid-template-areas:
+            'menu'
+            'main'
+            'bottom';
+        /* For some reason I had to double this*/
+        grid-template-columns: initial;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-rows: 11em min(24em, 100vh - 12em) 1fr;
+        height: 100vh;
+    }
 }
