@@ -9,7 +9,7 @@ export default {
 			grey: '#777'
 		},
 		fontFamily: {
-			sans: ['abcs', 'Helvetica', 'Arial', 'sans-serif']
+			sans: ['Finlandica', 'Helvetica', 'Arial', 'sans-serif']
 		},
 		extend: {
 			gridTemplateColumns: {
