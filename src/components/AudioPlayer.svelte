@@ -81,7 +81,7 @@
 	<div id="waveform" class="relative w-full py-1">
 		<div
 			id="time"
-			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min bg-white px-1 text-sm"
+			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min whitespace-nowrap bg-white px-1 text-sm"
 		>
 			{formattedTime}
 		</div>
