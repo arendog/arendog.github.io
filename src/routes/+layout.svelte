@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-    <meta name="description" content="Website of composer and saxophonist, Alex Rennie.">
-    <meta name="keywords" content="composition, saxophone, piano">
+	<meta name="description" content="Website of composer and saxophonist, Alex Rennie." />
+	<meta name="keywords" content="composition, saxophone, piano" />
 </svelte:head>
 
 <div class="fixed top-0 mx-20 my-12">

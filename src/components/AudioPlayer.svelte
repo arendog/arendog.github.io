@@ -16,17 +16,16 @@
 			height: 40,
 			barWidth: 2
 		});
-        
-        wavesurfer.on('pause', () => {
-        playing = wavesurfer.isPlaying();
-        });
+
+		wavesurfer.on('pause', () => {
+			playing = wavesurfer.isPlaying();
+		});
 	});
 
 	function pauseButton(): void {
 		wavesurfer.isPlaying() ? wavesurfer.pause() : wavesurfer.play();
 		playing = wavesurfer.isPlaying();
 	}
-
 </script>
 
 <div class="flex gap-4">

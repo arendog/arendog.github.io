@@ -4,7 +4,7 @@
 	interface Work {
 		title: string;
 		year: number;
-        premiere: string;
+		premiere: string;
 		dedication: string;
 		instrumentation: string;
 		instrumentationFull: string;
@@ -16,13 +16,13 @@
 		audioURL: string;
 		audioTitle: string;
 		expandable: boolean;
-        WIP: boolean;
+		WIP: boolean;
 		tags: {
-			orchestral: boolean,
-			chamber: boolean,
-			choral: boolean,
-			vocal: boolean,
-			concerti: boolean
+			orchestral: boolean;
+			chamber: boolean;
+			choral: boolean;
+			vocal: boolean;
+			concerti: boolean;
 		};
 	}
 
@@ -30,18 +30,18 @@
 	export let searchWords: string[];
 	export let work: Work;
 
-	$: regexSearch = new RegExp(searchWords.join("|"), 'gi');
+	$: regexSearch = new RegExp(searchWords.join('|'), 'gi');
 	$: markedTitle = searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title;
-	$: titleChunks = markedTitle.split("~").filter(i => i);
+	$: titleChunks = markedTitle.split('~').filter((i) => i);
 </script>
 
-<div class="flex w-[36rem] flex-col">
+<div class="flex flex-col">
 	<h3 class="font-bold">
 		{#each titleChunks as chunk, i}
 			{#if (markedTitle[0] == '~') == (i % 2 == 1)}
-			{chunk}
+				{chunk}
 			{:else}
-			<div class="bg-accent w-min inline rounded-sm">{chunk}</div>
+				<div class="inline w-min rounded-sm bg-accent">{chunk}</div>
 			{/if}
 		{/each}
 	</h3>
@@ -77,25 +77,25 @@
 			{#if work.perusalScoreURL}
 				<div class="mb-4">
 					<p class="text-base italic">Perusal score:</p>
-                    <div class="w-min">
-                        <a href={work.perusalScoreURL} target="_blank">
-                            <svg
-                                class="h-8 w-8 text-grey hover:text-primary"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 16 20"
-                            >
-                                <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M1 18a.969.969 0 0 0 .933 1h12.134A.97.97 0 0 0 15 18M1 7V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2v5M6 1v4a1 1 0 0 1-1 1H1m0 9v-5h1.5a1.5 1.5 0 1 1 0 3H1m12 2v-5h2m-2 3h2m-8-3v5h1.375A1.626 1.626 0 0 0 10 13.375v-1.75A1.626 1.626 0 0 0 8.375 10H7Z"
-                                />
-                            </svg>
-                        </a>
-                    </div>
+					<div class="w-min">
+						<a href={work.perusalScoreURL} target="_blank">
+							<svg
+								class="h-8 w-8 text-grey hover:text-primary"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 16 20"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M1 18a.969.969 0 0 0 .933 1h12.134A.97.97 0 0 0 15 18M1 7V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2v5M6 1v4a1 1 0 0 1-1 1H1m0 9v-5h1.5a1.5 1.5 0 1 1 0 3H1m12 2v-5h2m-2 3h2m-8-3v5h1.375A1.626 1.626 0 0 0 10 13.375v-1.75A1.626 1.626 0 0 0 8.375 10H7Z"
+								/>
+							</svg>
+						</a>
+					</div>
 				</div>
 			{/if}
 
@@ -107,7 +107,7 @@
 			{/if}
 
 			<button
-				class="my-2 rounded-lg border-2 px-2 text-left text-white bg-primary border-primary hover:bg-white hover:text-primary"
+				class="my-2 rounded-lg border-2 border-primary bg-primary px-2 text-left text-white hover:bg-white hover:text-primary"
 				on:click={() => (expanded = false)}
 			>
 				<p>Collapse</p>

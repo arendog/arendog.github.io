@@ -7,7 +7,6 @@
 	<title>{$page.status} Error</title>
 </svelte:head>
 
-
 <div class="error my-10 ml-80">
 	<h1 class="text-black">{$page.status}: {$page.error?.message} ☹</h1>
 	<p class="text-black">

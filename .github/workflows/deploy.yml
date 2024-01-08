@@ -25,15 +25,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-            npm config set legacy-peer-deps true
-            npm install
+          npm config set legacy-peer-deps true
+          npm install
 
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm run build
-          
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
