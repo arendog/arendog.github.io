@@ -7,7 +7,7 @@
 
 	let playing = false;
 	let formattedDuration = '';
-	let formattedTime = 'loading...';
+	let formattedTime = 'Loading...';
 
 	onMount(() => {
 		wavesurfer = WaveSurfer.create({
@@ -23,17 +23,22 @@
 			playing = wavesurfer.isPlaying();
 		});
 
+		wavesurfer.on('loading', (percent) => {
+			formattedTime = 'Loading: ' + percent + '%';
+		});
+
 		wavesurfer.on('decode', (duration) => {
 			formattedDuration = formatTime(duration);
 			formattedTime = formatTime(0);
 		});
+
 		wavesurfer.on('timeupdate', (currentTime) => {
 			formattedTime = formatTime(currentTime);
 		});
 	});
 
 	function pauseButton(): void {
-		wavesurfer.isPlaying() ? wavesurfer.pause() : (formattedTime != 'loading...') && (wavesurfer.play());
+		wavesurfer.isPlaying() ? wavesurfer.pause() : formattedDuration != '' && wavesurfer.play();
 		playing = wavesurfer.isPlaying();
 	}
 
