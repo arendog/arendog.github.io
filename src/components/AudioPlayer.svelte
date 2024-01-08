@@ -6,6 +6,8 @@
 	let wavesurfer: WaveSurfer;
 
 	let playing = false;
+	let formattedDuration = '';
+	let formattedTime = 'loading...';
 
 	onMount(() => {
 		wavesurfer = WaveSurfer.create({
@@ -20,12 +22,27 @@
 		wavesurfer.on('pause', () => {
 			playing = wavesurfer.isPlaying();
 		});
+
+		wavesurfer.on('decode', (duration) => {
+			formattedDuration = formatTime(duration);
+			formattedTime = formatTime(0);
+		});
+		wavesurfer.on('timeupdate', (currentTime) => {
+			formattedTime = formatTime(currentTime);
+		});
 	});
 
 	function pauseButton(): void {
 		wavesurfer.isPlaying() ? wavesurfer.pause() : wavesurfer.play();
 		playing = wavesurfer.isPlaying();
 	}
+
+	const formatTime = (seconds: number) => {
+		const minutes = Math.floor(seconds / 60);
+		const secondsRemainder = Math.round(seconds) % 60;
+		const paddedSeconds = `0${secondsRemainder}`.slice(-2);
+		return `${minutes}:${paddedSeconds}`;
+	};
 </script>
 
 <div class="flex gap-4">
@@ -56,5 +73,18 @@
 			</svg>
 		{/if}
 	</button>
-	<div id="waveform" class="w-full py-1" />
+	<div id="waveform" class="relative w-full py-1">
+		<div
+			id="time"
+			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min bg-white px-1 text-sm"
+		>
+			{formattedTime}
+		</div>
+		<div
+			id="duration"
+			class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min bg-white px-1 text-sm"
+		>
+			{formattedDuration}
+		</div>
+	</div>
 </div>
