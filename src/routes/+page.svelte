@@ -3,5 +3,5 @@
 </svelte:head>
 
 <div class="my-12 ml-80 w-[42rem]">
-	<h1>Site under construction...</h1>
+	<h1>WIP</h1>
 </div>
