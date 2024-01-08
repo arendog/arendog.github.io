@@ -21,7 +21,7 @@
     }
     let searchTerm = "";
 
-    $: searchWords = searchTerm.split(" ");
+    $: searchWords = searchTerm.split(" ").filter(i => i);
 
     $: filteredWorks = works.filter((work) => {
         for (let i = 0; i < searchWords.length; i++) {
@@ -66,7 +66,7 @@
 						<h3>{work.year}</h3>
 					{/if}
 				</div>
-				<Work {work} />
+				<Work {work} {searchWords} />
 			</div>
 		{/each}
 	</div>

@@ -27,11 +27,24 @@
 	}
 
 	let expanded = false;
+	export let searchWords: string[];
 	export let work: Work;
+
+	$: regexSearch = new RegExp(searchWords.join("|"), 'gi');
+	$: markedTitle = searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title;
+	$: titleChunks = markedTitle.split("~").filter(i => i);
 </script>
 
 <div class="flex w-[36rem] flex-col">
-	<h3 class="font-bold">{work.title}</h3>
+	<h3 class="font-bold">
+		{#each titleChunks as chunk, i}
+			{#if (markedTitle[0] == '~') == (i % 2 == 1)}
+			{chunk}
+			{:else}
+			<div class="bg-accent w-min inline rounded-sm">{chunk}</div>
+			{/if}
+		{/each}
+	</h3>
 
 	<div class="ml-8">
 		{#if expanded}
