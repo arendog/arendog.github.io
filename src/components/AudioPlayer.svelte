@@ -33,7 +33,7 @@
 	});
 
 	function pauseButton(): void {
-		wavesurfer.isPlaying() ? wavesurfer.pause() : wavesurfer.play();
+		wavesurfer.isPlaying() ? wavesurfer.pause() : (formattedTime != 'loading...') && (wavesurfer.play());
 		playing = wavesurfer.isPlaying();
 	}
 
