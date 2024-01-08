@@ -24,7 +24,7 @@
 		});
 
 		wavesurfer.on('loading', (percent) => {
-			formattedTime = 'Loading: ' + percent + '%';
+			formattedTime = percent == 100 ? 'Decoding...' : 'Loading: ' + percent + '%';
 		});
 
 		wavesurfer.on('decode', (duration) => {
@@ -38,6 +38,7 @@
 	});
 
 	function pauseButton(): void {
+		// Uses slightly hacky short circuit evaluation to trigger play if the duration has been set, i.e. audio decoded
 		wavesurfer.isPlaying() ? wavesurfer.pause() : formattedDuration != '' && wavesurfer.play();
 		playing = wavesurfer.isPlaying();
 	}
@@ -81,13 +82,13 @@
 	<div id="waveform" class="relative w-full py-1">
 		<div
 			id="time"
-			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min whitespace-nowrap bg-white px-1 text-sm"
+			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min whitespace-nowrap bg-white px-1 text-sm opacity-50"
 		>
 			{formattedTime}
 		</div>
 		<div
 			id="duration"
-			class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min bg-white px-1 text-sm"
+			class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min bg-white px-1 text-sm opacity-50"
 		>
 			{formattedDuration}
 		</div>
