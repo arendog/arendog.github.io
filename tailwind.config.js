@@ -4,7 +4,7 @@ export default {
 	theme: {
 		colors: {
 			primary: '#2e16cc',
-			accent: '#e3f75e',
+			accent: '#dcf538',
 			white: '#fff',
 			black: '#000',
 			grey: '#777'
