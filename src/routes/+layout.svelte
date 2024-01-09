@@ -12,7 +12,9 @@
 	<Sidenav />
 </div>
 
-<slot />
+<div class="my-12 ml-80 w-[42rem]">
+	<slot />
+</div>
 
 <!-- <div class="my-2 w-full text-center">
     <p class="text-sm">© Alex Rennie 2024</p>

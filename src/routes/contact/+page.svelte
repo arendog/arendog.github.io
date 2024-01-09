@@ -2,7 +2,7 @@
 	<title>Contact</title>
 </svelte:head>
 
-<div class="my-12 ml-80 flex w-[42rem] flex-col gap-4">
+<div class="flex flex-col gap-4">
 	<h1>Get in touch</h1>
 	<div>
 		<h2>Commissions</h2>

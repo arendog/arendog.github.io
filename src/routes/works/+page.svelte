@@ -6,6 +6,4 @@
 	<title>Works</title>
 </svelte:head>
 
-<div class="my-12 ml-80">
-	<Works />
-</div>
+<Works />
