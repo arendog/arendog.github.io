@@ -26,7 +26,7 @@
 	{/if}
 {:else}
 	<button
-		class="text-accent text-left hover:underline"
+		class="text-left text-accent hover:underline"
 		on:click={() => {
 			active = !active;
 		}}

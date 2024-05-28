@@ -38,7 +38,7 @@
 
 <div class="flex flex-col">
 	{#if work.url}
-		<a href={"works/" + work.url} class="hover:underline text-primary">
+		<a href={'works/' + work.url} class="text-primary hover:underline">
 			<h3 class="font-[600]">
 				<!-- TODO: fix highlighting problem when consecutive selection, per char basis? -->
 				{#each titleChunks as chunk, i}
@@ -68,7 +68,6 @@
 			<p class="italic">{work.dedication}</p>
 		{/if}
 
-		
 		<p><em class="mr-4">{work.instrumentation}</em>|<em class="ml-4">{work.duration}</em></p>
 	</div>
 </div>

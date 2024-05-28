@@ -28,7 +28,7 @@
 	<Sidenav />
 </div>
 
-<div class="ml-80 my-10 w-[42rem]">
+<div class="my-10 ml-80 w-[42rem]">
 	<slot />
 </div>
 
