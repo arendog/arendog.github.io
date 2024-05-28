@@ -3,11 +3,12 @@
 
 	interface Work {
 		title: string;
+		url: string;
 		year: number;
 		premiere: string;
 		dedication: string;
+		movements: string[];
 		instrumentation: string;
-		instrumentationFull: string;
 		duration: string;
 		descriptions: string[];
 		perusalScoreURL: string;
@@ -15,7 +16,7 @@
 		embeddedMediaTitle: string;
 		audioURL: string;
 		audioTitle: string;
-		expandable: boolean;
+		archive: boolean;
 		WIP: boolean;
 		tags: {
 			orchestral: boolean;
@@ -23,110 +24,99 @@
 			choral: boolean;
 			vocal: boolean;
 			concerti: boolean;
+			opera: boolean;
 		};
 	}
 
-	let expanded = false;
-	export let searchWords: string[];
 	export let work: Work;
-
-	$: regexSearch = new RegExp(searchWords.join('|'), 'gi');
-	$: markedTitle = searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title;
-	$: titleChunks = markedTitle.split('~').filter((i) => i);
 </script>
 
+<div class="flex w-[42rem] flex-col gap-4">
 <div class="flex flex-col">
-	<h3 class="font-bold">
-		{#each titleChunks as chunk, i}
-			{#if (markedTitle[0] == '~') == (i % 2 == 1)}
-				{chunk}
-			{:else}
-				<div class="inline w-min rounded-sm bg-accent">{chunk}</div>
-			{/if}
-		{/each}
-	</h3>
+    <div class="flex flex-wrap gap-2 items-baseline">
+        <h1 class="font-bold">
+            {work.title} 
+        </h1>
+        <h2 class="inline">({work.year})</h2>
+    </div>
 
 	<div class="ml-8">
-		{#if expanded}
-			{#if work.dedication}
-				<p class="italic">{work.dedication}</p>
-			{/if}
+		{#if work.dedication}
+			<p class="italic">{work.dedication}</p>
+		{/if}
 
-			<p class="italic">{work.instrumentationFull}</p>
+		
+		<p><em class="mr-4">{work.instrumentation}</em>|<em class="ml-4">{work.duration}</em></p>
 
-			<p class="mb-4 italic">{work.duration}</p>
+		
+        {#if work.premiere}
+            <p class="italic">première: {new Date(work.premiere).toDateString().slice(3)}</p>
+        {/if}
 
-			{#each work.descriptions as description}
-				<p class="mb-4">{description}</p>
-			{/each}
+        {#if work.movements.length}
+            <ol class="mt-4 list-[upper-roman] pl-12">
+                {#each work.movements as movement}
+                    <li><p class="italic">{movement}</p></li>
+                {/each}
+            </ol>
+        {/if}
 
-			{#if work.embeddedMediaURL}
-				<div class="mb-4">
-					<p class="text-base italic">{work.embeddedMediaTitle}</p>
-					<iframe
-						class="h-[315px] w-[560px]"
-						src={work.embeddedMediaURL}
-						title="Video player"
-						frameborder="0"
-						allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-				</div>
-			{/if}
+        {#each work.descriptions as description}
+            <p class="mt-4">{description}</p>
+        {/each}
 
-			{#if work.perusalScoreURL}
-				<div class="mb-4">
-					<p class="text-base italic">Perusal score:</p>
-					<div class="w-min">
-						<a href={work.perusalScoreURL} target="_blank">
-							<svg
-								class="h-8 w-8 text-grey hover:text-primary"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 16 20"
-							>
-								<path
-									stroke="currentColor"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M1 18a.969.969 0 0 0 .933 1h12.134A.97.97 0 0 0 15 18M1 7V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2v5M6 1v4a1 1 0 0 1-1 1H1m0 9v-5h1.5a1.5 1.5 0 1 1 0 3H1m12 2v-5h2m-2 3h2m-8-3v5h1.375A1.626 1.626 0 0 0 10 13.375v-1.75A1.626 1.626 0 0 0 8.375 10H7Z"
-								/>
-							</svg>
-						</a>
-					</div>
-				</div>
-			{/if}
+        {#if work.embeddedMediaURL}
+            <div class="mt-4">
+                <p class="text-base italic">{work.embeddedMediaTitle}</p>
+                <iframe
+                    class="h-[315px] w-[560px]"
+                    src={work.embeddedMediaURL}
+                    title="Video player"
+                    frameborder="0"
+                    allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        {/if}
 
-			{#if work.audioURL}
-				<div class="mb-4">
-					<p class="text-base italic">{work.audioTitle}</p>
-					<AudioPlayer sound_url={work.audioURL} />
-				</div>
-			{/if}
+        {#if work.perusalScoreURL}
+            <div class="mt-4">
+                <p class="text-base italic">Perusal score:</p>
+                <div class="w-min">
+                    <a href={work.perusalScoreURL} target="_blank">
+                        <svg
+                            class="h-8 w-8 text-grey hover:text-primary"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 16 20"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M1 18a.969.969 0 0 0 .933 1h12.134A.97.97 0 0 0 15 18M1 7V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2v5M6 1v4a1 1 0 0 1-1 1H1m0 9v-5h1.5a1.5 1.5 0 1 1 0 3H1m12 2v-5h2m-2 3h2m-8-3v5h1.375A1.626 1.626 0 0 0 10 13.375v-1.75A1.626 1.626 0 0 0 8.375 10H7Z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        {/if}
 
-			<button
-				class="my-2 rounded-lg border-2 border-primary bg-primary px-2 text-left text-white hover:bg-white hover:text-primary"
-				on:click={() => (expanded = false)}
-			>
-				<p>Collapse</p>
-			</button>
-		{:else}
-			{#if work.dedication}
-				<p class="italic">{work.dedication}</p>
-			{/if}
-
-			<p><em class="mr-4">{work.instrumentation}</em>|<em class="ml-4">{work.duration}</em></p>
-
-			{#if work.expandable}
-				<button
-					class="my-2 rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-white"
-					on:click={() => (expanded = true)}
-				>
-					<p>Expand</p>
-				</button>
-			{/if}
+        {#if work.audioURL}
+            <div class="mt-4 w-full">
+                <div class="flex w-full">
+                    <svg class="w-6 h-6 align-middle text-grey" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M20 16v-4a8 8 0 1 0-16 0v4m16 0v2a2 2 0 0 1-2 2h-2v-6h2a2 2 0 0 1 2 2ZM4 16v2c0 1.1.9 2 2 2h2v-6H6a2 2 0 0 0-2 2Z"/>
+                    </svg>
+                    <p class="text-base italic ml-2 truncate overflow-hidden">{work.audioTitle}</p>
+                </div>
+                <AudioPlayer sound_url={work.audioURL} />
+            </div>
+        
 		{/if}
 	</div>
+</div>
+
 </div>

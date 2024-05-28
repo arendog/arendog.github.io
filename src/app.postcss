@@ -23,17 +23,43 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: Finlandica;
+	src: url('/fonts/Finlandica-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
 h1 {
-	font-size: 2.75rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 }
 h2 {
-	font-size: 1.875rem;
+	font-size: 1.8rem;
+	line-height: 2.25rem;
 }
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
+	line-height: 1.6em;
 }
 
 p {
 	font-size: 1.125rem;
+	line-height: 1.6em;
+}
+
+#nprogress .bar {
+	background: theme('colors.primary') !important;
+}
+
+.tippy-box {
+	background: #fff;
+}
+
+.tippy-box > .tippy-arrow::before {
+	transform: scale(0.8);
+}
+
+.tippy-content {
+	font-size: 0.8rem;
 }

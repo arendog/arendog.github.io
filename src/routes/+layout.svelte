@@ -1,6 +1,22 @@
-<script>
+<script lang="ts">
 	import '../app.postcss';
+	import { navigating } from '$app/stores';
+
 	import Sidenav from '../components/Sidenav.svelte';
+
+	import NProgress from 'nprogress';
+	import 'nprogress/nprogress.css';
+
+	NProgress.configure({ showSpinner: false });
+
+	$: {
+		if ($navigating) {
+			NProgress.start();
+		}
+		if (!$navigating) {
+			NProgress.done();
+		}
+	}
 </script>
 
 <svelte:head>
@@ -12,7 +28,7 @@
 	<Sidenav />
 </div>
 
-<div class="my-12 ml-80 w-[42rem]">
+<div class="ml-80 my-10 w-[42rem]">
 	<slot />
 </div>
 

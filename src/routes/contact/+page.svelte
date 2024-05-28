@@ -1,6 +1,7 @@
 <svelte:head>
-	<title>Contact</title>
+	<title>Contact - Alex Rennie</title>
 </svelte:head>
+
 
 <div class="flex flex-col gap-4">
 	<h1>Get in touch</h1>
@@ -14,8 +15,7 @@
 	<div>
 		<h2>Performances</h2>
 		<p>
-			If you are interested in performing any of my music, please email me and we can discuss
-			scores/part rentals.
+			If you are interested in performing any of my music, or want to request additional scores, please email.
 		</p>
 	</div>
 	<p class="mt-8">

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import works from '$lib/data/works.json';
-	import Work from './Work.svelte';
+	import WorkList from './WorkList.svelte';
 	import SearchFilter from './SearchFilter.svelte';
 	import SearchTag from './SearchTag.svelte';
 
@@ -9,7 +9,8 @@
 		chamber: boolean;
 		choral: boolean;
 		vocal: boolean;
-		concerti: boolean;
+		opera: boolean;
+		electronic: boolean;
 	}
 
 	let searchTags: SearchTags = {
@@ -17,9 +18,11 @@
 		chamber: false,
 		choral: false,
 		vocal: false,
-		concerti: false
+		opera: false,
+		electronic: false
 	};
 	let searchTerm = '';
+	let archive = false;
 
 	$: searchWords = searchTerm.split(' ').filter((i) => i);
 
@@ -37,26 +40,35 @@
 			}
 		}
 
+		if (work.archive && !archive) {
+			return false;
+		}
+
 		return true;
 	});
+
+	// Slighty hacky way to collapse children when filteredWords updates
+	$: expandedChildren = filteredWorks.map((_) => false);
 </script>
 
 <div class="flex w-[42rem] flex-col gap-4">
-	<h1>Works</h1>
+	<div class="flex flex-col gap-2">
+		<h1>Selected works</h1>
 
-	<div class="flex flex-wrap gap-2">
-		<SearchFilter bind:searchTerm />
-		{#each Object.keys(searchTags) as key}
-			{#if filteredWorks.filter((work) => {return work.tags[key as keyof SearchTags]}).length > 0}
-				<SearchTag
-					bind:active={searchTags[key as keyof SearchTags]}
-					text={key.charAt(0).toUpperCase() + key.slice(1)}
-				/>
-			{/if}
-		{/each}
+		<div class="flex flex-wrap gap-2">
+			<SearchFilter bind:searchTerm />
+			{#each Object.keys(searchTags) as key}
+				{#if filteredWorks.filter((work) => {return work.tags[key as keyof SearchTags]}).length > 0}
+					<SearchTag
+						bind:active={searchTags[key as keyof SearchTags]}
+						text={key.charAt(0).toUpperCase() + key.slice(1)}
+					/>
+				{/if}
+			{/each}
+		</div>
 	</div>
 
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-3">
 		{#each filteredWorks as work, i}
 			<div class="flex gap-12">
 				<div class="w-12">
@@ -68,8 +80,11 @@
 						<h3>{work.year}</h3>
 					{/if}
 				</div>
-				<Work {work} {searchWords} />
+				<WorkList bind:expanded={expandedChildren[i]} {work} {searchWords} />
 			</div>
 		{/each}
+	</div>
+	<div class="w-auto">
+		<SearchTag bind:active={archive} text={(archive ? "Hide " : "Display " ) + "archived works"} tag={false}/>
 	</div>
 </div>

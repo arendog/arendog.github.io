@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Works</title>
+	<title>Works - Alex Rennie</title>
 </svelte:head>
 
 <Works />
