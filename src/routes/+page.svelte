@@ -7,4 +7,4 @@
 	class="absolute inset-0 -z-10 h-full w-full object-cover"
 	alt="hi"
 />
-<p>Alex Rennie is a composer and saxophonist...</p>
+<p>Website under construction...</p>
