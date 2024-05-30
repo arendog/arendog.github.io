@@ -5,7 +5,7 @@
 <div
 	class="inset-x-0 flex flex-col justify-center gap-6 bg-white py-2 md:gap-16 md:bg-transparent md:py-12"
 >
-	<div class="flex items-center justify-center gap-4 md:w-auto md:flex-none">
+	<div class="flex items-center justify-center gap-2 md:w-auto md:flex-none">
 		<button
 			class="items-center rounded-md p-2 text-black focus:ring-2 focus:ring-accent md:hidden"
 			on:click={() => {
@@ -45,7 +45,7 @@
 			</svg>
 		</button>
 		<a href="/">
-			<h2 class="text-left leading-none md:text-right"><b>Alex Rennie</b><br />Composer</h2>
+			<h2 class="p-2 text-left leading-none md:text-right"><b>Alex Rennie</b><br />Composer</h2>
 		</a>
 	</div>
 	<div class:show={menuOpen} class="flex hidden flex-col text-center md:block md:text-right">
