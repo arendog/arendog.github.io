@@ -1,7 +1,7 @@
 [
 	{
 		"title": "Herschel [working title]",
-		"url": "herschel",
+		"url": "",
 		"year": 2025,
 		"premiere": "",
 		"dedication": "",
@@ -10,8 +10,8 @@
 		"duration": "c. 20'",
 		"descriptions": [],
 		"perusalScoreURL": "",
-		"embeddedMediaURL": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?si=hQJHhylMw-9mP6xZ",
-		"embeddedMediaTitle": "Routine test...",
+		"embeddedMediaURL": "",
+		"embeddedMediaTitle": "",
 		"audioURL": "",
 		"audioTitle": "",
 		"archive": false,
@@ -143,11 +143,7 @@
 		"movements": [],
 		"instrumentation": "clarinet, violin, cello",
 		"duration": "c. 6'30\"",
-		"descriptions": [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis lorem ac augue mattis imperdiet. Cras vehicula vel enim non commodo. Nunc neque leo, malesuada a egestas ac, mattis sit amet turpis. Nunc malesuada, velit eu ornare dapibus, turpis nulla tincidunt turpis, aliquet vestibulum augue dui sed urna. Integer ut sem faucibus, feugiat nibh nec, egestas massa. Aenean ornare tortor in nulla pellentesque finibus. Nam pharetra lacus quis metus gravida pulvinar non et enim. Fusce tincidunt at felis quis rhoncus. Vestibulum id lectus sagittis, bibendum libero feugiat, finibus tortor.",
-			"Sed vehicula, enim eget varius maximus, ex mauris mollis justo, vel pulvinar eros ante non turpis. Cras vitae molestie diam. Ut eget quam ullamcorper, congue ipsum non, placerat massa. Nunc ipsum felis, ultricies ac dui quis, euismod faucibus diam. Nullam facilisis, enim ac ornare fringilla, diam ex efficitur augue, eu rhoncus risus nibh nec diam. Nulla id enim in enim luctus gravida. Phasellus metus tortor, tincidunt et diam sit amet, ullamcorper rhoncus lectus. Aliquam gravida, justo quis faucibus porttitor, nibh nunc gravida nunc, pellentesque consectetur ipsum elit blandit dui.",
-			"Quisque sapien lectus, hendrerit id felis ac, bibendum dignissim orci. In hac habitasse platea dictumst. In aliquam ante vel erat sagittis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed sollicitudin elit non vehicula congue. Suspendisse quis justo vitae nulla dignissim luctus. Curabitur vestibulum ex volutpat consectetur mattis. Fusce scelerisque enim ac tortor finibus maximus. Pellentesque at augue eu lorem maximus ultrices et eu libero. Sed at dignissim mi. Donec vitae dui erat. Curabitur placerat imperdiet libero, sed dignissim turpis tincidunt vel."
-		],
+		"descriptions": [],
 		"perusalScoreURL": "/documents/trio.pdf",
 		"embeddedMediaURL": "",
 		"embeddedMediaTitle": "",

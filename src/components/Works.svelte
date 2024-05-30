@@ -84,11 +84,11 @@
 			</div>
 		{/each}
 	</div>
-	<div class="w-auto">
+	<!-- <div class="w-auto">
 		<SearchTag
 			bind:active={archive}
 			text={(archive ? 'Hide ' : 'Display ') + 'archived works'}
 			tag={false}
 		/>
-	</div>
+	</div> -->
 </div>
