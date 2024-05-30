@@ -24,11 +24,11 @@
 	<meta name="keywords" content="composition, saxophone, piano" />
 </svelte:head>
 
-<div class="fixed top-0 mx-20 my-12">
+<div class="md:content-left top-0 content-center md:fixed md:mx-10 lg:mx-20">
 	<Sidenav />
 </div>
 
-<div class="my-10 ml-80 w-[42rem]">
+<div class="mx-10 mt-4 md:ml-60 md:mr-0 md:mt-10 md:w-[42rem] lg:ml-80">
 	<slot />
 </div>
 

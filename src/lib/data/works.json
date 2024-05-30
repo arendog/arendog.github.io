@@ -184,12 +184,12 @@
 		"WIP": false,
 		"tags": {
 			"orchestral": false,
-			"chamber": false,
+			"chamber": true,
 			"choral": false,
 			"vocal": false,
 			"concerti": false,
 			"opera": false,
-			"electronic": true
+			"electronic": false
 		}
 	},
 	{

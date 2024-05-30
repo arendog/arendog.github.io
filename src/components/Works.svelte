@@ -51,7 +51,7 @@
 	$: expandedChildren = filteredWorks.map((_) => false);
 </script>
 
-<div class="flex w-[42rem] flex-col gap-4">
+<div class="flex flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col gap-2">
 		<h1>Selected works</h1>
 
@@ -70,7 +70,7 @@
 
 	<div class="flex flex-col gap-3">
 		{#each filteredWorks as work, i}
-			<div class="flex gap-12">
+			<div class="flex gap-6 md:gap-12">
 				<div class="w-12">
 					{#if i > 0}
 						{#if work.year != filteredWorks[i - 1].year}
@@ -80,7 +80,7 @@
 						<h3>{work.year}</h3>
 					{/if}
 				</div>
-				<WorkList bind:expanded={expandedChildren[i]} {work} {searchWords} />
+				<WorkList {work} {searchWords} />
 			</div>
 		{/each}
 	</div>

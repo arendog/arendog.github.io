@@ -31,14 +31,12 @@
 	export let work: Work;
 </script>
 
-<div class="flex w-[42rem] flex-col gap-4">
+<div class="flex flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col">
-		<div class="flex flex-wrap items-baseline gap-2">
-			<h1 class="font-bold">
-				{work.title}
-			</h1>
-			<h2 class="inline">({work.year})</h2>
-		</div>
+		<h1 class="font-bold] mb-2">
+			{work.title}
+			<div class="inline text-[1.8rem] font-normal">({work.year})</div>
+		</h1>
 
 		<div class="ml-8">
 			{#if work.dedication}
@@ -67,7 +65,7 @@
 				<div class="mt-4">
 					<p class="text-base italic">{work.embeddedMediaTitle}</p>
 					<iframe
-						class="h-[315px] w-[560px]"
+						class="md:h-[315px] md:w-[560px]"
 						src={work.embeddedMediaURL}
 						title="Video player"
 						frameborder="0"

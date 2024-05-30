@@ -7,7 +7,8 @@ export default {
 			accent: '#cc0e86',
 			white: '#fff',
 			black: '#000',
-			grey: '#777'
+			grey: '#777',
+			transparent: 'transparent'
 		},
 		fontFamily: {
 			sans: ['Finlandica', 'Helvetica', 'Arial', 'sans-serif']
@@ -16,6 +17,11 @@ export default {
 			gridTemplateColumns: {
 				sidenav: '3rem auto'
 			}
+		},
+		screens: {
+			md: '900px',
+
+			lg: '1100px'
 		}
 	},
 	plugins: []
