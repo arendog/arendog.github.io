@@ -28,7 +28,7 @@
 	<Sidenav />
 </div>
 
-<div class="mx-10 mt-4 md:ml-60 md:mr-0 md:mt-10 md:w-[42rem] lg:ml-80">
+<div class="mx-6 mt-4 md:ml-60 md:mr-0 md:mt-10 md:w-[42rem] lg:ml-80">
 	<slot />
 </div>
 
