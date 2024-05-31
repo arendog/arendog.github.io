@@ -117,7 +117,7 @@
 		"instrumentation": "solo piano",
 		"duration": "c. 10'",
 		"descriptions": [],
-		"perusalScoreURL": "",
+		"perusalScoreURL": "/documents/assorted-patterns.pdf",
 		"embeddedMediaURL": "",
 		"embeddedMediaTitle": "",
 		"audioURL": "",
@@ -143,7 +143,10 @@
 		"movements": [],
 		"instrumentation": "clarinet, violin, cello",
 		"duration": "c. 6'30\"",
-		"descriptions": [],
+		"descriptions": [
+			"I wrote this piece over three days during the Guildhall Composition Summer Course, taught by Professor Paul Whitmarsh, and it was workshopped and performed by Guildhall students/alumni. It received a second performance on 8 October at an informal concert. At the time of first performance, I wrote the following:",
+			"“This trio for clarinet, violin, and cello combines two related melodies, from which I try to draw out as much contrast as possible. The piece begins with a simple, mournful theme led by the clarinet, which takes some inspiration from the counterpoint of Lassus and similar renaissance composers, but with a higher degree of chromaticism. This culminates in a forceful restatement with dissonant, violent chords now underpinning it, after which a folk-like dance takes hold, which becomes increasingly animated. The triumphant conclusion is undercut by a tragic return to the original material.”"
+		],
 		"perusalScoreURL": "/documents/trio.pdf",
 		"embeddedMediaURL": "",
 		"embeddedMediaTitle": "",
