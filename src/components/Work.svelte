@@ -31,7 +31,7 @@
 	export let work: Work;
 </script>
 
-<div class="flex flex-col gap-4 md:w-[42rem]">
+<div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col">
 		<h1 class="font-bold] mb-2">
 			{work.title}
