@@ -51,7 +51,7 @@
 	$: expandedChildren = filteredWorks.map((_) => false);
 </script>
 
-<div class="flex flex-col gap-4 md:w-[42rem]">
+<div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col gap-2">
 		<h1>Selected works</h1>
 
