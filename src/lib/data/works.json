@@ -1,13 +1,13 @@
 [
 	{
-		"title": "Herschel [working title]",
+		"title": "A Game of Uncertainties",
 		"url": "",
-		"year": 2025,
+		"year": 2024,
 		"premiere": "",
 		"dedication": "",
 		"movements": [],
-		"instrumentation": "amplified soprano, large orchestra",
-		"duration": "c. 20'",
+		"instrumentation": "mixed ensemble",
+		"duration": "c. 12'",
 		"descriptions": [],
 		"perusalScoreURL": "",
 		"embeddedMediaURL": "",
@@ -17,40 +17,13 @@
 		"archive": false,
 		"WIP": true,
 		"tags": {
-			"orchestral": true,
-			"chamber": false,
-			"choral": false,
-			"vocal": true,
-			"concerti": false,
-			"opera": false,
-			"electronic": false
-		}
-	},
-	{
-		"title": "Inharmonicity for Bass Saxophone and Eight Speakers",
-		"url": "inharmonicity",
-		"year": 2024,
-		"premiere": "",
-		"dedication": "",
-		"movements": [],
-		"instrumentation": "bass saxophone, live electronics",
-		"duration": "c. 10'",
-		"descriptions": [],
-		"perusalScoreURL": "",
-		"embeddedMediaURL": "",
-		"embeddedMediaTitle": "",
-		"audioURL": "",
-		"audioTitle": "",
-		"archive": false,
-		"WIP": false,
-		"tags": {
 			"orchestral": false,
-			"chamber": false,
+			"chamber": true,
 			"choral": false,
 			"vocal": false,
 			"concerti": false,
 			"opera": false,
-			"electronic": true
+			"electronic": false
 		}
 	},
 	{
