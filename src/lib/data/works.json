@@ -6,7 +6,7 @@
 		"premiere": "",
 		"dedication": "",
 		"movements": [],
-		"instrumentation": "mixed ensemble",
+		"instrumentation": "sinfonietta",
 		"duration": "c. 12'",
 		"descriptions": [],
 		"perusalScoreURL": "",
@@ -17,7 +17,7 @@
 		"archive": false,
 		"WIP": true,
 		"tags": {
-			"orchestral": false,
+			"orchestral": true,
 			"chamber": true,
 			"choral": false,
 			"vocal": false,
@@ -28,7 +28,7 @@
 	},
 	{
 		"title": "Cloches",
-		"url": "cloches",
+		"url": "",
 		"year": 2024,
 		"premiere": "",
 		"dedication": "",
@@ -42,7 +42,7 @@
 		"audioURL": "",
 		"audioTitle": "",
 		"archive": false,
-		"WIP": false,
+		"WIP": true,
 		"tags": {
 			"orchestral": false,
 			"chamber": false,
