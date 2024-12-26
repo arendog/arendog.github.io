@@ -11,11 +11,15 @@
 		instrumentation: string;
 		duration: string;
 		descriptions: string[];
+		imgURL: string,
+		imgCaption: string,
+		imgAlt: string,
 		perusalScoreURL: string;
+		perusalScoreSize: string;
 		embeddedMediaURL: string;
-		embeddedMediaTitle: string;
+		embeddedMediaCaption: string;
 		audioURL: string;
-		audioTitle: string;
+		audioCaption: string;
 		archive: boolean;
 		WIP: boolean;
 		tags: {

@@ -5,7 +5,8 @@ export default {
 		colors: {
 			primary: '#2e16cc',
 			accent: '#cc0e86',
-			white: '#fff',
+			white: '#f2e7d3',
+			// old white #fff1d9
 			black: '#000',
 			grey: '#777',
 			transparent: 'transparent'
