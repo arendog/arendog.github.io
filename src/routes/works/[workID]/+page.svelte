@@ -2,9 +2,11 @@
 	import works from '$lib/data/works.json';
 	import Work from '../../../components/Work.svelte';
 
-	export let data;
+	interface Props { data: any }
+
+	let { data }: Props = $props();
 	const { params } = data;
-	$: work = works.find((w) => w.url == params.workID);
+	let work = $derived(works.find((w) => w.url == params.workID));
 </script>
 
 <svelte:head>

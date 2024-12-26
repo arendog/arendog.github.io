@@ -15,7 +15,6 @@
 		imgCaption: string,
 		imgAlt: string,
 		perusalScoreURL: string;
-		perusalScoreSize: string;
 		embeddedMediaURL: string;
 		embeddedMediaCaption: string;
 		audioURL: string;
@@ -32,7 +31,9 @@
 		};
 	}
 
-	export let work: Work;
+	interface Props { work: Work }
+
+	let { work }: Props = $props();
 </script>
 
 <div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem] mb-[16rem]">
@@ -97,7 +98,7 @@
 		{#if work.perusalScoreURL}
 			<div class="mt-4 rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-white w-min">
 				<a href={work.perusalScoreURL} target="_blank">
-					<p class="text-base whitespace-nowrap">&darr; Download perusal score ({work.perusalScoreSize})</p>
+					<p class="text-base whitespace-nowrap">&darr; Download perusal score</p>
 				</a>
 			</div>
 		{/if}

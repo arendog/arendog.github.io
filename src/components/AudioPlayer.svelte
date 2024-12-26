@@ -2,12 +2,14 @@
 	import { onMount } from 'svelte';
 	import WaveSurfer from 'wavesurfer.js';
 
-	export let sound_url: string;
+	interface Props { sound_url: string }
+
+	let { sound_url }: Props = $props();
 	let wavesurfer: WaveSurfer;
 
-	let playing = false;
-	let formattedDuration = '';
-	let formattedTime = 'Loading...';
+	let playing = $state(false);
+	let formattedDuration = $state('');
+	let formattedTime = $state('Loading...');
 
 	onMount(() => {
 		wavesurfer = WaveSurfer.create({
@@ -52,7 +54,7 @@
 </script>
 
 <div class="flex gap-4">
-	<button on:click={pauseButton} class="my-4">
+	<button onclick={pauseButton} class="my-4">
 		{#if playing}
 			<svg
 				class="h-4 w-4 text-primary"

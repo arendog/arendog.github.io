@@ -1,14 +1,14 @@
 <script lang="ts">
-	export let active = false;
-	export let text = '';
-	export let tag = true;
+	interface Props { active?: boolean, text?: string, tag?: boolean }
+
+	let { active = $bindable(false), text = '', tag = true }: Props = $props();
 </script>
 
 {#if tag}
 	{#if active}
 		<button
 			class="rounded-lg border-2 border-primary bg-primary px-2 text-left text-white"
-			on:click={() => {
+			onclick={() => {
 				active = !active;
 			}}
 		>
@@ -17,7 +17,7 @@
 	{:else}
 		<button
 			class="rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-white"
-			on:click={() => {
+			onclick={() => {
 				active = !active;
 			}}
 		>
@@ -27,7 +27,7 @@
 {:else}
 	<button
 		class="text-left text-accent hover:underline"
-		on:click={() => {
+		onclick={() => {
 			active = !active;
 		}}
 	>

@@ -13,20 +13,20 @@
 		electronic: boolean;
 	}
 
-	let searchTags: SearchTags = {
+	let searchTags: SearchTags = $state({
 		orchestral: false,
 		chamber: false,
 		choral: false,
 		vocal: false,
 		opera: false,
 		electronic: false
-	};
-	let searchTerm = '';
+	});
+	let searchTerm = $state('');
 	let archive = false;
 
-	$: searchWords = searchTerm.split(' ').filter((i) => i);
+	let searchWords = $derived(searchTerm.split(' ').filter((i) => i));
 
-	$: filteredWorks = works.filter((work) => {
+	let filteredWorks = $derived(works.filter((work) => {
 		for (let i = 0; i < searchWords.length; i++) {
 			if (!work.title.toLowerCase().includes(searchWords[i].toLowerCase())) {
 				return false;
@@ -45,10 +45,10 @@
 		}
 
 		return true;
-	});
+	}));
 
 	// Slighty hacky way to collapse children when filteredWords updates
-	$: expandedChildren = filteredWorks.map((_) => false);
+	let expandedChildren = $derived(filteredWorks.map((_) => false));
 </script>
 
 <div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">

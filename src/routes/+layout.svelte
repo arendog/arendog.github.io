@@ -1,4 +1,9 @@
 <script lang="ts">
+	interface Props { children?: import('svelte').Snippet }
+
+	let { children }: Props = $props();
+	import { run } from 'svelte/legacy';
+
 	import '../app.postcss';
 	import { navigating } from '$app/stores';
 
@@ -9,14 +14,14 @@
 
 	NProgress.configure({ showSpinner: false });
 
-	$: {
+	run(() => {
 		if ($navigating) {
 			NProgress.start();
 		}
 		if (!$navigating) {
 			NProgress.done();
 		}
-	}
+	});
 </script>
 
 <svelte:head>
@@ -29,7 +34,7 @@
 </div>
 
 <div class="mx-6 my-4 md:ml-64 md:mr-0 md:mt-8 md:w-[42rem] lg:ml-80">
-	<slot />
+	{@render children?.()}
 </div>
 
 <!-- <div class="my-2 w-full text-center">

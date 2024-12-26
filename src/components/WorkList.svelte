@@ -15,7 +15,6 @@
 		imgCaption: string,
 		imgAlt: string,
 		perusalScoreURL: string;
-		perusalScoreSize: string;
 		embeddedMediaURL: string;
 		embeddedMediaCaption: string;
 		audioURL: string;
@@ -32,12 +31,13 @@
 		};
 	}
 
-	export let searchWords: string[];
-	export let work: Work;
+	interface Props { searchWords: string[], work: Work }
 
-	$: regexSearch = new RegExp(searchWords.join('|'), 'gi');
-	$: markedTitle = searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title;
-	$: titleChunks = markedTitle.split('~').filter((i) => i);
+	let { searchWords, work }: Props = $props();
+
+	let regexSearch = $derived(new RegExp(searchWords.join('|'), 'gi'));
+	let markedTitle = $derived(searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title);
+	let titleChunks = $derived(markedTitle.split('~').filter((i) => i));
 </script>
 
 <div class="flex flex-col">
