@@ -4,7 +4,7 @@
 
 <div class="flex flex-col gap-4">
 	<h1>Get in touch</h1>
-	<div>
+	<!-- <div>
 		<h2>Commissions</h2>
 		<p>
 			I have a varied experience writing for different ensembles and would love to discuss new
@@ -17,7 +17,7 @@
 			If you are interested in performing any of my music or want to request additional scores,
 			please email.
 		</p>
-	</div>
+	</div> -->
 	<p class="mt-8">
 		For all enquiries, email <a href="mailto:alex@alexrennie.com" class="text-primary underline"
 			>alex@alexrennie.com</a
