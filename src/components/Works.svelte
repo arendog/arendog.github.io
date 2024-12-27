@@ -7,6 +7,7 @@
 	interface SearchTags {
 		orchestral: boolean;
 		chamber: boolean;
+		solo: boolean;
 		choral: boolean;
 		vocal: boolean;
 		opera: boolean;
@@ -16,6 +17,7 @@
 	let searchTags: SearchTags = $state({
 		orchestral: false,
 		chamber: false,
+		solo: false,
 		choral: false,
 		vocal: false,
 		opera: false,

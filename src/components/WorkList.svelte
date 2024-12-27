@@ -23,6 +23,7 @@
 		tags: {
 			orchestral: boolean;
 			chamber: boolean;
+			solo: boolean;
 			choral: boolean;
 			vocal: boolean;
 			concerti: boolean;

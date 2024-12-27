@@ -131,6 +131,7 @@
 		"tags": {
 			"orchestral": false,
 			"chamber": true,
+			"solo": false,
 			"choral": false,
 			"vocal": false,
 			"concerti": false,
@@ -165,6 +166,7 @@
 		"tags": {
 			"orchestral": false,
 			"chamber": true,
+			"solo": false,
 			"choral": false,
 			"vocal": false,
 			"concerti": false,
@@ -196,6 +198,7 @@
 		"tags": {
 			"orchestral": false,
 			"chamber": false,
+			"solo": false,
 			"choral": false,
 			"vocal": false,
 			"concerti": false,
