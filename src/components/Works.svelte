@@ -87,7 +87,7 @@
 						<h3>{work.year}</h3>
 					{/if}
 					{#if i != filteredWorks.length - 1}
-						<div class="h-full w-[0.125rem] bg-grey"></div>
+						<div class="h-full w-[1px] bg-grey"></div>
 					{/if}
 				</div>
 				<div class="pb-3">
