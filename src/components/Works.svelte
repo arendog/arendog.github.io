@@ -7,6 +7,7 @@
 	interface SearchTags {
 		orchestral: boolean;
 		chamber: boolean;
+		solo: boolean;
 		choral: boolean;
 		vocal: boolean;
 		opera: boolean;
@@ -16,6 +17,7 @@
 	let searchTags: SearchTags = $state({
 		orchestral: false,
 		chamber: false,
+		solo: false,
 		choral: false,
 		vocal: false,
 		opera: false,
@@ -85,7 +87,7 @@
 						<h3>{work.year}</h3>
 					{/if}
 					{#if i != filteredWorks.length - 1}
-						<div class="h-full border-l-2 border-grey"></div>
+						<div class="h-full w-[0.125rem] bg-grey"></div>
 					{/if}
 				</div>
 				<div class="pb-3">
