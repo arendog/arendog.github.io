@@ -18,6 +18,7 @@
 		embeddedMediaURL: string;
 		embeddedMediaCaption: string;
 		audioURL: string;
+		audioPeaks: number[];
 		audioCaption: string;
 		archive: boolean;
 		WIP: boolean;
@@ -69,9 +70,14 @@
 		{/if}
 
 		{#if work.audioURL}
-			<div class="mt-4 w-full">
-				<AudioPlayer sound_url={work.audioURL} />
-				<p class="text-base italic my-2">{work.audioCaption}</p>
+			<div class="mt-4 w-full bg-white p-2 rounded-lg border-primary text-grey flex flex-col gap-2 shadow-md">
+				<AudioPlayer audio_url={work.audioURL} audio_peaks={work.audioPeaks} />
+				<div class="flex gap-2 items-center">
+					<svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+						<path fill-rule="evenodd" d="M12 5a7 7 0 0 0-7 7v1.17c.313-.11.65-.17 1-.17h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a3 3 0 0 1-3-3v-6a9 9 0 0 1 18 0v6a3 3 0 0 1-3 3h-2a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h2c.35 0 .687.06 1 .17V12a7 7 0 0 0-7-7Z" clip-rule="evenodd"/>
+					</svg>
+					<p class="text-base italic">{work.audioCaption}</p>
+				</div>
 			</div>
 		{/if}
 
@@ -96,7 +102,7 @@
 
 
 		{#if work.perusalScoreURL}
-			<div class="mt-4 rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-white w-min">
+			<div class="mt-4 rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment w-min">
 				<a href={work.perusalScoreURL} target="_blank">
 					<p class="text-base whitespace-nowrap">&darr; Download perusal score</p>
 				</a>

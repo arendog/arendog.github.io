@@ -18,6 +18,7 @@
 		embeddedMediaURL: string;
 		embeddedMediaCaption: string;
 		audioURL: string;
+		audioPeaks: number[];
 		audioCaption: string;
 		archive: boolean;
 		WIP: boolean;

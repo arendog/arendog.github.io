@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 	import WaveSurfer from 'wavesurfer.js';
 
-	interface Props { sound_url: string }
+	interface Props { audio_url: string, audio_peaks: number[][] }
 
-	let { sound_url }: Props = $props();
+	let { audio_url, audio_peaks }: Props = $props();
 	let wavesurfer: WaveSurfer;
 
 	let playing = $state(false);
@@ -14,12 +14,18 @@
 	onMount(() => {
 		wavesurfer = WaveSurfer.create({
 			container: '#waveform',
+			// backend: 'WebAudio',
 			waveColor: '#ccc',
 			progressColor: '#2E16CC',
-			url: sound_url,
+			url: audio_url,
+			peaks: audio_peaks,
 			height: 40,
 			barWidth: 2
 		});
+
+		// wavesurfer.on('ready', function () {
+		// 	console.log(wavesurfer.exportPeaks({maxLength: 512}));
+		// });
 
 		wavesurfer.on('pause', () => {
 			playing = wavesurfer.isPlaying();
@@ -53,7 +59,7 @@
 	};
 </script>
 
-<div class="flex gap-4">
+<div class="flex gap-2">
 	<button onclick={pauseButton} class="my-4">
 		{#if playing}
 			<svg
@@ -84,13 +90,13 @@
 	<div id="waveform" class="relative w-full py-1">
 		<div
 			id="time"
-			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min whitespace-nowrap bg-white/70 px-1 text-sm"
+			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min whitespace-nowrap bg-white/90 rounded-tr-md w-[2.25rem] px-1 text-sm"
 		>
 			{formattedTime}
 		</div>
 		<div
 			id="duration"
-			class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min bg-white/70 px-1 text-sm"
+			class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min bg-white/90 rounded-tl-md w-[2.25rem] px-1 text-sm"
 		>
 			{formattedDuration}
 		</div>
