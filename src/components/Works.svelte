@@ -50,7 +50,6 @@
 			return true;
 		})
 	);
-
 </script>
 
 <div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
