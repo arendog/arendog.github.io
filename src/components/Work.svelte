@@ -11,9 +11,9 @@
 		instrumentation: string;
 		duration: string;
 		descriptions: string[];
-		imgURL: string,
-		imgCaption: string,
-		imgAlt: string,
+		imgURL: string;
+		imgCaption: string;
+		imgAlt: string;
 		perusalScoreURL: string;
 		embeddedMediaURL: string;
 		embeddedMediaCaption: string;
@@ -32,12 +32,14 @@
 		};
 	}
 
-	interface Props { work: Work }
+	interface Props {
+		work: Work;
+	}
 
 	let { work }: Props = $props();
 </script>
 
-<div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem] mb-[16rem]">
+<div class="mb-[16rem] flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col">
 		<h1 class="font-bold] mb-2">
 			{work.title}
@@ -64,17 +66,31 @@
 
 		{#if work.imgURL}
 			<div class="mt-4 w-full">
-				<img alt={work.imgAlt} class="" src={work.imgURL}>
-				<p class="text-sm text-grey italic my-1">{work.imgCaption}</p>
+				<img alt={work.imgAlt} class="" src={work.imgURL} />
+				<p class="my-1 text-sm italic text-grey">{work.imgCaption}</p>
 			</div>
 		{/if}
 
 		{#if work.audioURL}
-			<div class="mt-4 w-full bg-white p-2 rounded-lg border-primary text-grey flex flex-col gap-2 shadow-md">
+			<div
+				class="mt-4 flex w-full flex-col gap-2 rounded-lg border-primary bg-white p-2 text-grey shadow-md"
+			>
 				<AudioPlayer audio_url={work.audioURL} audio_peaks={work.audioPeaks} />
-				<div class="flex gap-2 items-center">
-					<svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-						<path fill-rule="evenodd" d="M12 5a7 7 0 0 0-7 7v1.17c.313-.11.65-.17 1-.17h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a3 3 0 0 1-3-3v-6a9 9 0 0 1 18 0v6a3 3 0 0 1-3 3h-2a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h2c.35 0 .687.06 1 .17V12a7 7 0 0 0-7-7Z" clip-rule="evenodd"/>
+				<div class="flex items-center gap-2">
+					<svg
+						class="h-4 w-4"
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						fill="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M12 5a7 7 0 0 0-7 7v1.17c.313-.11.65-.17 1-.17h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a3 3 0 0 1-3-3v-6a9 9 0 0 1 18 0v6a3 3 0 0 1-3 3h-2a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h2c.35 0 .687.06 1 .17V12a7 7 0 0 0-7-7Z"
+							clip-rule="evenodd"
+						/>
 					</svg>
 					<p class="text-base italic">{work.audioCaption}</p>
 				</div>
@@ -82,8 +98,8 @@
 		{/if}
 
 		{#if work.embeddedMediaURL}
-		<div class="mt-4">
-			<p class="text-base italic">{work.embeddedMediaCaption}</p>
+			<div class="mt-4">
+				<p class="text-base italic">{work.embeddedMediaCaption}</p>
 				<iframe
 					class="md:h-[315px] md:w-[560px]"
 					src={work.embeddedMediaURL}
@@ -95,19 +111,18 @@
 			</div>
 		{/if}
 
-
 		{#each work.descriptions as description}
 			<p class="my-4">{description}</p>
 		{/each}
 
-
 		{#if work.perusalScoreURL}
-			<div class="mt-4 rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment w-min">
+			<div
+				class="mt-4 w-min rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment"
+			>
 				<a href={work.perusalScoreURL} target="_blank">
-					<p class="text-base whitespace-nowrap">&darr; Download perusal score</p>
+					<p class="whitespace-nowrap text-base">&darr; Download perusal score</p>
 				</a>
 			</div>
 		{/if}
-		
 	</div>
 </div>

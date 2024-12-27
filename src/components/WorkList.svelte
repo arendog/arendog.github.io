@@ -1,6 +1,4 @@
 <script lang="ts">
-	import AudioPlayer from './AudioPlayer.svelte';
-
 	interface Work {
 		title: string;
 		url: string;
@@ -11,9 +9,9 @@
 		instrumentation: string;
 		duration: string;
 		descriptions: string[];
-		imgURL: string,
-		imgCaption: string,
-		imgAlt: string,
+		imgURL: string;
+		imgCaption: string;
+		imgAlt: string;
 		perusalScoreURL: string;
 		embeddedMediaURL: string;
 		embeddedMediaCaption: string;
@@ -32,12 +30,17 @@
 		};
 	}
 
-	interface Props { searchWords: string[], work: Work }
+	interface Props {
+		searchWords: string[];
+		work: Work;
+	}
 
 	let { searchWords, work }: Props = $props();
 
 	let regexSearch = $derived(new RegExp(searchWords.join('|'), 'gi'));
-	let markedTitle = $derived(searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title);
+	let markedTitle = $derived(
+		searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title
+	);
 	let titleChunks = $derived(markedTitle.split('~').filter((i) => i));
 </script>
 

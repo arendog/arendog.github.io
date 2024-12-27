@@ -2,7 +2,10 @@
 	import { onMount } from 'svelte';
 	import WaveSurfer from 'wavesurfer.js';
 
-	interface Props { audio_url: string, audio_peaks: number[][] }
+	interface Props {
+		audio_url: string;
+		audio_peaks: number[][];
+	}
 
 	let { audio_url, audio_peaks }: Props = $props();
 	let wavesurfer: WaveSurfer;
@@ -90,13 +93,13 @@
 	<div id="waveform" class="relative w-full py-1">
 		<div
 			id="time"
-			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min whitespace-nowrap bg-white/90 rounded-tr-md w-[2.25rem] px-1 text-sm"
+			class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min w-[2.25rem] whitespace-nowrap rounded-tr-md bg-white/90 px-1 text-sm"
 		>
 			{formattedTime}
 		</div>
 		<div
 			id="duration"
-			class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min bg-white/90 rounded-tl-md w-[2.25rem] px-1 text-sm"
+			class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min w-[2.25rem] rounded-tl-md bg-white/90 px-1 text-sm"
 		>
 			{formattedDuration}
 		</div>
