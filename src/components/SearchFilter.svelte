@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let searchTerm: string;
+	interface Props { searchTerm: string }
+
+	let { searchTerm = $bindable() }: Props = $props();
 </script>
 
 <input
