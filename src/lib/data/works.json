@@ -198,7 +198,7 @@
 		"tags": {
 			"orchestral": false,
 			"chamber": false,
-			"solo": false,
+			"solo": true,
 			"choral": false,
 			"vocal": false,
 			"concerti": false,
