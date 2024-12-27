@@ -5,8 +5,9 @@ export default {
 		colors: {
 			primary: '#2e16cc',
 			accent: '#cc0e86',
-			white: '#f2e7d3',
+			parchment: '#f2e7d3',
 			// old white #fff1d9
+			white: "#fff",
 			black: '#000',
 			grey: '#777',
 			transparent: 'transparent'

@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="inset-x-0 flex flex-col justify-center gap-6 border-b-2 bg-white py-1 md:gap-16 md:border-0 md:bg-transparent md:py-12"
+	class="inset-x-0 flex flex-col justify-center gap-6 border-b-2 bg-parchment py-1 md:gap-16 md:border-0 md:bg-transparent md:py-12"
 >
 	<div class="flex items-center justify-center gap-2 md:w-auto md:flex-none">
 		<button
