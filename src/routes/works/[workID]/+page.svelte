@@ -2,7 +2,9 @@
 	import works from '$lib/data/works.json';
 	import Work from '../../../components/Work.svelte';
 
-	interface Props { data: any }
+	interface Props {
+		data: any;
+	}
 
 	let { data }: Props = $props();
 	const { params } = data;

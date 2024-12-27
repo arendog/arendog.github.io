@@ -1,5 +1,9 @@
 <script lang="ts">
-	interface Props { active?: boolean, text?: string, tag?: boolean }
+	interface Props {
+		active?: boolean;
+		text?: string;
+		tag?: boolean;
+	}
 
 	let { active = $bindable(false), text = '', tag = true }: Props = $props();
 </script>

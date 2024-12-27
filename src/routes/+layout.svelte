@@ -1,5 +1,7 @@
 <script lang="ts">
-	interface Props { children?: import('svelte').Snippet }
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
 	let { children }: Props = $props();
 	import { run } from 'svelte/legacy';

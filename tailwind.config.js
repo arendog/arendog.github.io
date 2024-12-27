@@ -7,7 +7,7 @@ export default {
 			accent: '#cc0e86',
 			parchment: '#f2e7d3',
 			// old white #fff1d9
-			white: "#fff",
+			white: '#fff',
 			black: '#000',
 			grey: '#777',
 			transparent: 'transparent'
