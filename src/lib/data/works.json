@@ -4,7 +4,7 @@
 		"url": "oceanograph",
 		"year": 2024,
 		"premiere": "2024-08-02",
-		"dedication": "written for standard issue",
+		"dedication": "for standard issue",
 		"movements": [],
 		"instrumentation": "flute, clarinet, percussion, violin, cello",
 		"duration": "4'45\"",
@@ -126,7 +126,6 @@
 		],
 		"audioCaption": "oceanograph, performed by standard issue, conducted by David Horne",
 		"archive": false,
-		"WIP": false,
 		"tags": {
 			"orchestral": false,
 			"chamber": true,
@@ -161,7 +160,6 @@
 		"audioPeaks": [],
 		"audioCaption": "",
 		"archive": false,
-		"WIP": false,
 		"tags": {
 			"orchestral": false,
 			"chamber": true,
@@ -193,7 +191,6 @@
 		"audioPeaks": [],
 		"audioCaption": "",
 		"archive": false,
-		"WIP": false,
 		"tags": {
 			"orchestral": false,
 			"chamber": false,

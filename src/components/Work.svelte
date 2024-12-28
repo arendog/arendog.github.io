@@ -21,7 +21,6 @@
 		audioPeaks: number[][];
 		audioCaption: string;
 		archive: boolean;
-		WIP: boolean;
 		tags: {
 			orchestral: boolean;
 			chamber: boolean;
