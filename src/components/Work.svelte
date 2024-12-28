@@ -140,7 +140,7 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-						<p class="whitespace-nowrap text-base">Download perusal score (.pdf)</p>
+						<p class="whitespace-nowrap text-base">Download perusal score (PDF)</p>
 					</div>
 				</a>
 			</div>
