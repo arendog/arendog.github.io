@@ -72,7 +72,9 @@
 		{/if}
 
 		{#if work.audioURL}
-			<div class="my-4 flex w-full flex-col gap-2 rounded-lg bg-white p-2 text-darkgrey shadow-md">
+			<div
+				class="my-4 flex w-full flex-col gap-2 rounded-lg bg-white px-3 py-2 text-darkgrey shadow-md"
+			>
 				<AudioPlayer audio_url={work.audioURL} audio_peaks={work.audioPeaks} />
 				<div class="flex items-center gap-2">
 					<svg
