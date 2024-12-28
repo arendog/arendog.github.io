@@ -10,6 +10,7 @@ export default {
 			white: '#fff',
 			black: '#000',
 			grey: '#777',
+			darkgrey: '#4A4A4A',
 			transparent: 'transparent'
 		},
 		fontFamily: {

@@ -18,7 +18,7 @@
 		wavesurfer = WaveSurfer.create({
 			container: '#waveform',
 			// backend: 'WebAudio',
-			waveColor: '#ccc',
+			waveColor: '#aaa',
 			progressColor: '#2E16CC',
 			url: audio_url,
 			peaks: audio_peaks,
@@ -63,7 +63,7 @@
 </script>
 
 <div class="flex gap-2">
-	<button onclick={pauseButton} class="my-4">
+	<button title={playing ? "Pause audio" : "Play audio"} onclick={pauseButton} class="my-4">
 		{#if playing}
 			<svg
 				class="h-4 w-4 text-primary"
