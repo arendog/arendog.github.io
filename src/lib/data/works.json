@@ -141,7 +141,7 @@
 	},
 	{
 		"title": "Chaconne",
-		"url": "chaconne",
+		"url": "",
 		"year": 2024,
 		"premiere": "2024-06-21",
 		"dedication": "",
@@ -155,7 +155,7 @@
 		"imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bourdon_de_Notre-Dame_de_Paris_insere_dans_un_plan_du_choeur.jpg/1024px-Bourdon_de_Notre-Dame_de_Paris_insere_dans_un_plan_du_choeur.jpg?20201122024452",
 		"imgCaption": "",
 		"imgAlt": "",
-		"perusalScoreURL": "",
+		"perusalScoreURL": "/documents/chaconne.pdf",
 		"embeddedMediaURL": "",
 		"embeddedMediaCaption": "",
 		"audioURL": "",
@@ -176,7 +176,7 @@
 	},
 	{
 		"title": "Assorted Patterns",
-		"url": "assorted-patterns",
+		"url": "",
 		"year": 2024,
 		"premiere": "2024-03-16",
 		"dedication": "",
