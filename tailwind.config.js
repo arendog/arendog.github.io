@@ -4,7 +4,7 @@ export default {
 	theme: {
 		colors: {
 			primary: '#2e16cc',
-			accent: '#cc0e86',
+			accent: '#c40e81',
 			parchment: '#f2e7d3',
 			// old white #fff1d9
 			white: '#fff',
