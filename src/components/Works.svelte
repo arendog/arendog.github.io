@@ -77,7 +77,7 @@
 		{/if}
 		{#each filteredWorks as work, i}
 			<div class="flex gap-6 md:gap-12">
-				<div class="flex w-12 flex-col items-center">
+				<div class="flex min-w-12 flex-col items-center">
 					{#if i > 0}
 						{#if work.year != filteredWorks[i - 1].year}
 							<h3>{work.year}</h3>
