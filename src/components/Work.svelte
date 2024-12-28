@@ -68,12 +68,12 @@
 		{#if work.imgURL}
 			<div class="mt-4 w-full">
 				<img alt={work.imgAlt} class="" src={work.imgURL} />
-				<p class="my-1 text-sm italic text-grey">{work.imgCaption}</p>
+				<p class="my-1 text-sm italic text-darkgrey">{work.imgCaption}</p>
 			</div>
 		{/if}
 
 		{#if work.audioURL}
-			<div class="my-4 flex w-full flex-col gap-2 rounded-lg bg-white p-2 text-grey shadow-md">
+			<div class="my-4 flex w-full flex-col gap-2 rounded-lg bg-white p-2 text-darkgrey shadow-md">
 				<AudioPlayer audio_url={work.audioURL} audio_peaks={work.audioPeaks} />
 				<div class="flex items-center gap-2">
 					<svg

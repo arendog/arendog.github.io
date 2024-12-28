@@ -18,7 +18,7 @@
 		wavesurfer = WaveSurfer.create({
 			container: '#waveform',
 			// backend: 'WebAudio',
-			waveColor: '#ccc',
+			waveColor: '#aaa',
 			progressColor: '#2E16CC',
 			url: audio_url,
 			peaks: audio_peaks,
