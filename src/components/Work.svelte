@@ -40,7 +40,7 @@
 	let { work }: Props = $props();
 </script>
 
-<div class="mb-[16rem] flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
+<div class="mb-16 flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col">
 		<h1 class="font-bold] mb-2">
 			{work.title}

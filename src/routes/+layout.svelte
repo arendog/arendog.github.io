@@ -31,14 +31,13 @@
 	<meta name="keywords" content="composition, saxophone, piano" />
 </svelte:head>
 
-
 <div class="md:content-left top-0 content-center md:fixed md:mx-10 lg:mx-20">
 	<nav>
 		<Sidenav />
 	</nav>
 </div>
 
-<div class="mx-6 my-4 md:ml-64 md:mr-0 md:mt-8 md:w-[42rem] lg:ml-80">
+<div class="mx-6 mb-16 mt-4 md:ml-64 md:mr-0 md:mt-8 md:w-[42rem] lg:ml-80">
 	<main>
 		{@render children?.()}
 	</main>
