@@ -59,7 +59,9 @@
 		<div class="flex flex-wrap gap-2">
 			<SearchFilter bind:searchTerm />
 			{#each Object.keys(searchTags) as key}
-				{#if filteredWorks.filter((work) => {return work.tags[key as keyof SearchTags]}).length > 0}
+				{#if filteredWorks.filter((work) => {
+					return work.tags[key as keyof SearchTags];
+				}).length > 0}
 					<SearchTag
 						bind:active={searchTags[key as keyof SearchTags]}
 						text={key.charAt(0).toUpperCase() + key.slice(1)}

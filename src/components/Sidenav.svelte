@@ -7,7 +7,7 @@
 >
 	<div class="flex items-center justify-center gap-2 md:w-auto md:flex-none">
 		<button
-			class="items-center rounded-md p-2 text-black focus:ring-2 focus:ring-accent md:hidden"
+			class="items-center rounded-md p-2 text-black focus:ring-2 focus:ring-primary md:hidden"
 			onclick={() => {
 				menuOpen = !menuOpen;
 			}}

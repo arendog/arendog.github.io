@@ -11,7 +11,7 @@
 {#if tag}
 	{#if active}
 		<button
-			class="rounded-lg border-2 border-primary bg-primary px-2 text-left text-parchment"
+			class="rounded-lg border-2 border-accent bg-accent px-2 text-left text-parchment"
 			onclick={() => {
 				active = !active;
 			}}
@@ -20,7 +20,7 @@
 		</button>
 	{:else}
 		<button
-			class="rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment"
+			class="rounded-lg border-2 px-2 text-left text-accent hover:border-accent hover:bg-accent hover:text-parchment"
 			onclick={() => {
 				active = !active;
 			}}
