@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Bio - Alex Rennie</title>
+	<title>Biography - Alex Rennie</title>
 </svelte:head>
 
 <h1 class="mb-4">Biography</h1>

@@ -49,11 +49,14 @@
 		</a>
 	</div>
 	<div class:show={menuOpen} class="flex hidden flex-col text-center md:block md:text-right">
-		<a href="/bio" class="hover:underline">
+		<a href="/biography" class="hover:underline">
 			<h3>Biography</h3>
 		</a>
 		<a href="/works" class="hover:underline">
 			<h3>Works</h3>
+		</a>
+		<a href="/writings" class="hover:underline">
+			<h3>Writings</h3>
 		</a>
 		<!-- <a href="jazz">
             <h3>Jazz</h3>
