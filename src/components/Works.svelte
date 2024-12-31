@@ -8,7 +8,7 @@
 		works: Work[];
 	}
 
-	let { works }: Props = $props()
+	let { works }: Props = $props();
 
 	let searchTags: Tags = $state({
 		orchestral: false,
@@ -23,8 +23,6 @@
 	let searchTerm = $state('');
 
 	let searchWords = $derived(searchTerm.split(' ').filter((i) => i));
-
-
 
 	let filteredWorks = $derived(
 		works.filter((work) => {
@@ -91,11 +89,4 @@
 			</div>
 		{/each}
 	</div>
-	<!-- <div class="w-auto">
-		<SearchTag
-			bind:active={archive}
-			text={(archive ? 'Hide ' : 'Display ') + 'archived works'}
-			tag={false}
-		/>
-	</div> -->
 </div>
