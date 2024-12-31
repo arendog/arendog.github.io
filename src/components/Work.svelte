@@ -100,7 +100,7 @@
 
 		{#if meta.perusal_score_url}
 			<div
-				class="mt-4 w-min rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment"
+				class="mt-4	 w-min rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment"
 			>
 				<a href={meta.perusal_score_url} target="_blank">
 					<div class="flex items-center gap-1">
