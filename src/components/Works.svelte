@@ -1,20 +1,16 @@
 <script lang="ts">
-	import works from '$lib/data/works.json';
 	import WorkList from './WorkList.svelte';
 	import SearchFilter from './SearchFilter.svelte';
 	import SearchTag from './SearchTag.svelte';
+	import { type Tags, type Work } from '$lib';
 
-	interface SearchTags {
-		orchestral: boolean;
-		chamber: boolean;
-		solo: boolean;
-		choral: boolean;
-		vocal: boolean;
-		opera: boolean;
-		electronic: boolean;
+	interface Props {
+		works: Work[];
 	}
 
-	let searchTags: SearchTags = $state({
+	let { works }: Props = $props()
+
+	let searchTags: Tags = $state({
 		orchestral: false,
 		chamber: false,
 		solo: false,
@@ -23,10 +19,12 @@
 		opera: false,
 		electronic: false
 	});
+
 	let searchTerm = $state('');
-	let archive = false;
 
 	let searchWords = $derived(searchTerm.split(' ').filter((i) => i));
+
+
 
 	let filteredWorks = $derived(
 		works.filter((work) => {
@@ -38,13 +36,9 @@
 
 			for (let i = 0; i < Object.keys(searchTags).length; i++) {
 				let key = Object.keys(searchTags)[i];
-				if (searchTags[key as keyof SearchTags] && !work.tags[key as keyof SearchTags]) {
+				if (searchTags[key as keyof Tags] && !work.tags[key as keyof Tags]) {
 					return false;
 				}
-			}
-
-			if (work.archive && !archive) {
-				return false;
 			}
 
 			return true;
@@ -60,10 +54,10 @@
 			<SearchFilter bind:searchTerm />
 			{#each Object.keys(searchTags) as key}
 				{#if filteredWorks.filter((work) => {
-					return work.tags[key as keyof SearchTags];
+					return work.tags[key as keyof Tags];
 				}).length > 0}
 					<SearchTag
-						bind:active={searchTags[key as keyof SearchTags]}
+						bind:active={searchTags[key as keyof Tags]}
 						text={key.charAt(0).toUpperCase() + key.slice(1)}
 					/>
 				{/if}

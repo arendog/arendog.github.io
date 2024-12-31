@@ -1,0 +1,20 @@
+---
+title: Chaconne
+year: 2024
+premiere: 2024-06-21
+dedication: ''
+movements: []
+instrumentation: Pierrot + vibraphone
+duration: 4'
+banner_img_url: ''
+banner_img_alt: ''
+banner_img_caption: ''
+perusal_score_url: ''
+audio_url: ''
+audio_peaks_url: ''
+audio_caption: ''
+listed: true
+page: false
+tags:
+    chamber: true
+---

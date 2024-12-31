@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import AudioPlayer from './AudioPlayer.svelte';
-	import { load } from '../routes/works/[slug]/+page';
 
 	interface Props {
 		meta: any;

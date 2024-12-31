@@ -14,8 +14,9 @@ audio_url: /audio/oceanograph.wav
 audio_peaks_url: /audio/oceanograph-peaks.json
 audio_caption: oceanograph, performed by standard issue, conducted by David Horne
 listed: true
+page: true
 tags:
-    - chamber
+    chamber: true
 ---
 
 Written as part of Sound and Music's ***In the Making*** program for resident ensemble ***standard issue***, over a three day period. Premièred on 2<sup>nd</sup> August 2024, Richard Steinitz Building, University of Huddersfield.

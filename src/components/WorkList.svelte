@@ -1,38 +1,7 @@
 <script lang="ts">
-	interface Work {
-		title: string;
-		url: string;
-		year: number;
-		premiere: string;
-		dedication: string;
-		movements: string[];
-		instrumentation: string;
-		duration: string;
-		descriptions: string[];
-		imgURL: string;
-		imgCaption: string;
-		imgAlt: string;
-		perusalScoreURL: string;
-		embeddedMediaURL: string;
-		embeddedMediaCaption: string;
-		audioURL: string;
-		audioPeaks: number[][];
-		audioCaption: string;
-		archive: boolean;
-		tags: {
-			orchestral: boolean;
-			chamber: boolean;
-			solo: boolean;
-			choral: boolean;
-			vocal: boolean;
-			concerti: boolean;
-			opera: boolean;
-		};
-	}
-
 	interface Props {
 		searchWords: string[];
-		work: Work;
+		work: any;
 	}
 
 	let { searchWords, work }: Props = $props();
@@ -41,12 +10,12 @@
 	let markedTitle = $derived(
 		searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title
 	);
-	let titleChunks = $derived(markedTitle.split('~').filter((i) => i));
+	let titleChunks = $derived(markedTitle.split('~').filter((i: string) => i));
 </script>
 
 <div class="flex flex-col">
-	{#if work.url}
-		<a href={'works/' + work.url}>
+	{#if work.page}
+		<a href={'works/' + work.slug}>
 			<div class="flex items-center text-primary hover:underline">
 				<svg
 					class="h-6 w-6"
