@@ -1,5 +1,4 @@
 <script lang="ts">
-	import works from '$lib/data/works.json';
 	import Work from '../../../components/Work.svelte';
 
 	interface Props {

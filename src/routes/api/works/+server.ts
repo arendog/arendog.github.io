@@ -26,6 +26,5 @@ async function getJSON() {
 
 export async function GET() {
     const items = await getJSON();
-    console.log(items);
     return json(items);
 }
