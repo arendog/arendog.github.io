@@ -7,14 +7,13 @@
 	}
 
 	let { data }: Props = $props();
-	const { params } = data;
-	let work = $derived(works.find((w) => w.url == params.workID));
+	// const { params } = data;
+
+	// let work = works.find((w) => w.url === params.slug);
 </script>
 
 <svelte:head>
-	<title>Works - Alex Rennie</title>
+	<title>{data.meta.title} - Alex Rennie</title>
 </svelte:head>
 
-{#if work}
-	<Work {work} />
-{/if}
+<Work meta={data.meta} content={data.content} />
