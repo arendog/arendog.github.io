@@ -17,7 +17,3 @@ export async function load({ params }) {
 		throw error(404, 'Page not found');
 	}
 }
-
-// export const load = ({ fetch, params }) => {
-// 	return { params };
-// };
