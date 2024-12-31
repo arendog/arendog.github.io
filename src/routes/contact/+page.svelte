@@ -17,7 +17,7 @@
 		please email.
 	</p>
 </div> -->
-<p>
+<p class="my-0">
 	<!-- <p class="mt-8"> -->
 	For all enquiries, email
 	<a href="mailto:alex@alexrennie.com" class="text-primary underline">alex@alexrennie.com</a>.

@@ -73,7 +73,7 @@
 
 	<div class="flex flex-col">
 		{#if filteredWorks.length == 0}
-			<p>No results found.</p>
+			<p class="my-0">No results found.</p>
 		{/if}
 		{#each filteredWorks as work, i}
 			<div class="flex gap-6 md:gap-12">

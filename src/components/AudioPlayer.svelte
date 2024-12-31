@@ -124,7 +124,7 @@
 					clip-rule="evenodd"
 				/>
 			</svg>
-			<p class="text-base italic">{audio_caption}</p>
+			<p class="text-base italic my-0">{audio_caption}</p>
 		</div>
 	{/if}
 </div>

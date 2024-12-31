@@ -9,7 +9,7 @@
 
 <div class="error">
 	<h1 class="text-black">{$page.status}: {$page.error?.message} ☹</h1>
-	<p class="text-black">
+	<p class="text-black my-0">
 		{#if $page.status == 404}
 			Oh, no! This page doesn’t seem to exist.
 		{:else if $page.status == 403}
