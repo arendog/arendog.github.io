@@ -54,7 +54,11 @@
 
 		{#if meta.banner_img_url}
 			<div class="mt-4 w-full">
-				<img alt={meta.banner_img_alt} class="" src={meta.banner_img_url} />
+				<img
+					alt={meta.banner_img_alt}
+					class="h-[24rem] w-full object-cover"
+					src={meta.banner_img_url}
+				/>
 				<p class="my-1 text-sm italic text-darkgrey">{meta.banner_img_caption}</p>
 			</div>
 		{/if}
@@ -98,7 +102,7 @@
 
 		{#if meta.perusal_score_url}
 			<div
-				class="mt-4	 w-min rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment"
+				class="mt-4 w-min rounded-lg border-2 px-2 text-left text-primary hover:border-primary hover:bg-primary hover:text-parchment"
 			>
 				<a href={meta.perusal_score_url} target="_blank">
 					<div class="flex items-center gap-1">
