@@ -35,25 +35,27 @@
 		</h1>
 
 		{#if meta.dedication}
-			<p class="italic my-0">{meta.dedication}</p>
+			<p class="my-0 italic">{meta.dedication}</p>
 		{/if}
 
-		<p class="my-0"><em class="mr-4">{meta.instrumentation}</em>|<em class="ml-4">{meta.duration}</em></p>
+		<p class="my-0">
+			<em class="mr-4">{meta.instrumentation}</em>|<em class="ml-4">{meta.duration}</em>
+		</p>
 
 		{#if meta.premiere}
-			<p class="italic my-0">premièred {new Date(meta.premiere).toDateString().slice(3)}</p>
+			<p class="my-0 italic">premièred {new Date(meta.premiere).toDateString().slice(3)}</p>
 		{/if}
 
-		{#if meta.movements}
+		{#if meta.movements.length}
 			<ol class="mt-4 list-[upper-roman] pl-12">
 				{#each meta.movements as movement}
-					<li><p class="italic my-0">{movement}</p></li>
+					<li><p class="my-0 italic">{movement}</p></li>
 				{/each}
 			</ol>
 		{/if}
 
 		{#if meta.banner_img_url}
-			<div class="w-full">
+			<div class="mt-4 w-full">
 				<img alt={meta.banner_img_alt} class="" src={meta.banner_img_url} />
 				<p class="my-1 text-sm italic text-darkgrey">{meta.banner_img_caption}</p>
 			</div>
@@ -122,7 +124,7 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-						<p class="whitespace-nowrap my-0">Download perusal score (PDF)</p>
+						<p class="my-0 whitespace-nowrap">Download perusal score (PDF)</p>
 					</div>
 				</a>
 			</div>

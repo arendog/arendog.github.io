@@ -92,9 +92,11 @@
 
 	<div class="ml-8">
 		{#if work.dedication}
-			<p class="italic my-0">{work.dedication}</p>
+			<p class="my-0 italic">{work.dedication}</p>
 		{/if}
 
-		<p class="my-0"><em class="mr-4">{work.instrumentation}</em>|<em class="ml-4">{work.duration}</em></p>
+		<p class="my-0">
+			<em class="mr-4">{work.instrumentation}</em>|<em class="ml-4">{work.duration}</em>
+		</p>
 	</div>
 </div>
