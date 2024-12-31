@@ -2,7 +2,6 @@
 	<title>Contact - Alex Rennie</title>
 </svelte:head>
 
-
 <h1>Get in touch</h1>
 <!-- <div>
 	<h2>Commissions</h2>
@@ -18,9 +17,8 @@
 		please email.
 	</p>
 </div> -->
-<p>
-<!-- <p class="mt-8"> -->
-	For all enquiries, email <a href="mailto:alex@alexrennie.com" class="text-primary underline"
-		>alex@alexrennie.com</a
-	>.
+<p class="my-0">
+	<!-- <p class="mt-8"> -->
+	For all enquiries, email
+	<a href="mailto:alex@alexrennie.com" class="text-primary underline">alex@alexrennie.com</a>.
 </p>

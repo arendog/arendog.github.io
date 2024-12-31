@@ -2,4 +2,4 @@
 	<title>Alex Rennie - composer</title>
 </svelte:head>
 
-<p>Website under construction...</p>
+<p class="my-0">Website under construction...</p>

@@ -16,7 +16,7 @@
 				active = !active;
 			}}
 		>
-			<p>&times; {text}</p>
+			<p class="my-0">&times; {text}</p>
 		</button>
 	{:else}
 		<button
@@ -25,7 +25,7 @@
 				active = !active;
 			}}
 		>
-			<p>{text}</p>
+			<p class="my-0">{text}</p>
 		</button>
 	{/if}
 {:else}
@@ -35,6 +35,6 @@
 			active = !active;
 		}}
 	>
-		<p>{text}</p>
+		<p class="my-0">{text}</p>
 	</button>
 {/if}
