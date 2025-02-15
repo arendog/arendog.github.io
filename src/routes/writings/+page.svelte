@@ -1,5 +1,13 @@
+<script lang="ts">
+	import Writings from '../../components/Writings.svelte';
+	import type { Writing } from '$lib';
+
+	export let data: { writings: Writing[] };
+</script>
+
 <svelte:head>
-	<title>Bio - Alex Rennie</title>
+	<title>Writings - Alex Rennie</title>
 </svelte:head>
 
-<h1>Writings</h1>
+<Writings writings={data.writings} />
+

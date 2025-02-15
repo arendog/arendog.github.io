@@ -1,40 +1,35 @@
 <script lang="ts">
-	import WorkList from './WorkList.svelte';
+	import WritingList from './WritingList.svelte';
 	import SearchFilter from './SearchFilter.svelte';
 	import SearchTag from './SearchTag.svelte';
-	import { type WorkTags, type Work } from '$lib';
+	import { type WritingTags, type Writing } from '$lib';
 
 	interface Props {
-		works: Work[];
+		writings: Writing[];
 	}
 
-	let { works }: Props = $props();
+    let { writings }: Props = $props();
 
-	let searchTags: WorkTags = $state({
-		orchestral: false,
-		chamber: false,
-		solo: false,
-		choral: false,
-		vocal: false,
-		opera: false,
-		electronic: false
+    let searchTags: WritingTags = $state({
+		article: false,
+        essay: false
 	});
 
 	let searchTerm = $state('');
 
 	let searchWords = $derived(searchTerm.split(' ').filter((i) => i));
 
-	let filteredWorks = $derived(
-		works.filter((work) => {
+	let filteredWritings = $derived(
+		writings.filter((writing) => {
 			for (let i = 0; i < searchWords.length; i++) {
-				if (!work.title.toLowerCase().includes(searchWords[i].toLowerCase())) {
+				if (!writing.title.toLowerCase().includes(searchWords[i].toLowerCase())) {
 					return false;
 				}
 			}
 
 			for (let i = 0; i < Object.keys(searchTags).length; i++) {
 				let key = Object.keys(searchTags)[i];
-				if (searchTags[key as keyof WorkTags] && !work.tags[key as keyof WorkTags]) {
+				if (searchTags[key as keyof WritingTags] && !writing.tags[key as keyof WritingTags]) {
 					return false;
 				}
 			}
@@ -46,16 +41,16 @@
 
 <div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col gap-2">
-		<h1>Selected works</h1>
+		<h1>Selected writings</h1>
 
 		<div class="flex flex-wrap gap-2">
 			<SearchFilter bind:searchTerm />
 			{#each Object.keys(searchTags) as key}
-				{#if filteredWorks.filter((work) => {
-					return work.tags[key as keyof WorkTags];
+				{#if filteredWritings.filter((writing) => {
+					return writing.tags[key as keyof WritingTags];
 				}).length > 0}
 					<SearchTag
-						bind:active={searchTags[key as keyof WorkTags]}
+						bind:active={searchTags[key as keyof WritingTags]}
 						text={key.charAt(0).toUpperCase() + key.slice(1)}
 					/>
 				{/if}
@@ -64,27 +59,27 @@
 	</div>
 
 	<div class="flex flex-col">
-		{#if filteredWorks.length == 0}
+		{#if filteredWritings.length == 0}
 			<p class="my-0">No results found.</p>
 		{/if}
-		{#each filteredWorks as work, i}
+		{#each filteredWritings as writing, i}
 			<div class="flex gap-6 md:gap-12">
 				<div class="flex min-w-12 flex-col items-center">
 					{#if i > 0}
-						{#if work.year != filteredWorks[i - 1].year}
-							<h3>{work.year}</h3>
+						{#if writing.date.getFullYear != filteredWritings[i - 1].date.getFullYear}
+							<h3>{writing.date.getFullYear}</h3>
 						{:else}
 							<h3>&#8226;</h3>
 						{/if}
 					{:else}
-						<h3>{work.year}</h3>
+						<h3>{writing.date.getFullYear}</h3>
 					{/if}
-					{#if i != filteredWorks.length - 1}
+					{#if i != filteredWritings.length - 1}
 						<div class="h-full w-[1px] bg-grey"></div>
 					{/if}
 				</div>
 				<div class="pb-3">
-					<WorkList {work} {searchWords} />
+					<WritingList {writing} {searchWords} />
 				</div>
 			</div>
 		{/each}

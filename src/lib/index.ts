@@ -1,5 +1,5 @@
 // place files you want to import through the `$lib` alias in this folder.
-export type Tags = {
+export type WorkTags = {
 	orchestral: boolean;
 	chamber: boolean;
 	solo: boolean;
@@ -7,6 +7,11 @@ export type Tags = {
 	vocal: boolean;
 	opera: boolean;
 	electronic: boolean;
+};
+
+export type WritingTags = {
+	article: boolean;
+	essay: boolean;
 };
 
 export type Work = {
@@ -27,5 +32,18 @@ export type Work = {
 	audio_caption: string;
 	listed: boolean;
 	page: boolean;
-	tags: Tags;
+	tags: WorkTags;
+};
+
+export type Writing = {
+	slug: string;
+	title: string;
+	date: Date;
+	subtitle: string;
+	banner_img_url: string;
+	banner_img_alt: string;
+	banner_img_caption: string;
+	listed: boolean;
+	page: boolean;
+	tags: WritingTags;
 };
