@@ -14,7 +14,7 @@ audio_url: /audio/oceanograph.wav
 audio_peaks_url: /audio/oceanograph-peaks.json
 audio_caption: oceanograph, performed by standard issue, conducted by David Horne
 listed: true
-page: true
+page: false
 tags:
     chamber: true
 ---
