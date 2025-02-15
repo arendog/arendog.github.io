@@ -56,7 +56,7 @@
 			<div class="mt-4 w-full">
 				<img
 					alt={meta.banner_img_alt}
-					class="w-full aspect-video object-cover"
+					class="aspect-video w-full object-cover"
 					src={meta.banner_img_url}
 				/>
 				<p class="my-1 text-sm italic text-darkgrey">{meta.banner_img_caption}</p>
