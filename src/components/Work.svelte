@@ -27,7 +27,7 @@
 
 <div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col">
-		<h1>
+		<h1 class="my-2 leading-[3rem]">
 			{meta.title}
 			<div class="inline text-[1.8rem] font-normal">({meta.year})</div>
 		</h1>

@@ -10,4 +10,3 @@
 </svelte:head>
 
 <Writings writings={data.writings} />
-

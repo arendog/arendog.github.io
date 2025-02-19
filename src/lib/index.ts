@@ -1,4 +1,4 @@
-// place files you want to import through the `$lib` alias in this folder.
+// types to be imported through `$lib` alias.
 export type WorkTags = {
 	orchestral: boolean;
 	chamber: boolean;
@@ -18,7 +18,7 @@ export type Work = {
 	slug: string;
 	title: string;
 	year: number;
-	premiere: Date;
+	premiere: string;
 	dedication: string;
 	movements: string[];
 	instrumentation: string;
@@ -38,8 +38,7 @@ export type Work = {
 export type Writing = {
 	slug: string;
 	title: string;
-	date: Date;
-	subtitle: string;
+	date: string;
 	banner_img_url: string;
 	banner_img_alt: string;
 	banner_img_caption: string;

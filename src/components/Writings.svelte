@@ -8,11 +8,11 @@
 		writings: Writing[];
 	}
 
-    let { writings }: Props = $props();
+	let { writings }: Props = $props();
 
-    let searchTags: WritingTags = $state({
+	let searchTags: WritingTags = $state({
 		article: false,
-        essay: false
+		essay: false
 	});
 
 	let searchTerm = $state('');
@@ -66,13 +66,13 @@
 			<div class="flex gap-6 md:gap-12">
 				<div class="flex min-w-12 flex-col items-center">
 					{#if i > 0}
-						{#if writing.date.getFullYear != filteredWritings[i - 1].date.getFullYear}
-							<h3>{writing.date.getFullYear}</h3>
+						{#if writing.date.substring(0, 4) != filteredWritings[i - 1].date.substring(0, 4)}
+							<h3>{writing.date.substring(0, 4)}</h3>
 						{:else}
 							<h3>&#8226;</h3>
 						{/if}
 					{:else}
-						<h3>{writing.date.getFullYear}</h3>
+						<h3>{writing.date.substring(0, 4)}</h3>
 					{/if}
 					{#if i != filteredWritings.length - 1}
 						<div class="h-full w-[1px] bg-grey"></div>
