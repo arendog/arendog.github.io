@@ -41,7 +41,7 @@
 
 <div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
 	<div class="flex flex-col gap-2">
-		<h1>Selected writings</h1>
+		<h1>Writings</h1>
 
 		<div class="flex flex-wrap gap-2">
 			<SearchFilter bind:searchTerm />
