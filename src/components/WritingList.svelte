@@ -1,21 +1,21 @@
 <script lang="ts">
 	interface Props {
 		searchWords: string[];
-		work: any;
+		writing: any;
 	}
 
-	let { searchWords, work }: Props = $props();
+	let { searchWords, writing }: Props = $props();
 
 	let regexSearch = $derived(new RegExp(searchWords.join('|'), 'gi'));
 	let markedTitle = $derived(
-		searchWords.length ? work.title.replace(regexSearch, '~$&~') : work.title
+		searchWords.length ? writing.title.replace(regexSearch, '~$&~') : writing.title
 	);
 	let titleChunks = $derived(markedTitle.split('~').filter((i: string) => i));
 </script>
 
 <div class="flex flex-col">
-	{#if work.page}
-		<a href={'works/' + work.slug}>
+	{#if writing.page}
+		<a href={'writings/' + writing.slug}>
 			<div class="flex items-center text-primary hover:underline">
 				<!-- link icon: -->
 				<!-- <svg
@@ -59,14 +59,4 @@
 			{/each}
 		</h3>
 	{/if}
-
-	<div class="ml-8">
-		{#if work.dedication}
-			<p class="my-0 italic">{work.dedication}</p>
-		{/if}
-
-		<p class="my-0">
-			<em class="mr-4">{work.instrumentation}</em>|<em class="ml-4">{work.duration}</em>
-		</p>
-	</div>
 </div>
