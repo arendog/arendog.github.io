@@ -33,15 +33,17 @@
 		</h1>
 
 		{#if meta.dedication}
-			<p class="my-0 italic">{meta.dedication}</p>
+			<p class="my-0 italic text-darkgrey">{meta.dedication}</p>
 		{/if}
 
-		<p class="my-0">
+		<p class="my-0 text-darkgrey">
 			<em class="mr-4">{meta.instrumentation}</em>|<em class="ml-4">{meta.duration}</em>
 		</p>
 
 		{#if meta.premiere}
-			<p class="my-0 italic">premièred {new Date(meta.premiere).toDateString().slice(3)}</p>
+			<p class="my-0 italic text-darkgrey">
+				premièred {new Date(meta.premiere).toDateString().slice(3)}
+			</p>
 		{/if}
 
 		{#if meta.movements.length}

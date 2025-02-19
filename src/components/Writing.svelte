@@ -15,7 +15,7 @@
 		</h1>
 
 		{#if meta.date}
-			<p class="my-0 text-base">{new Date(meta.date).toDateString().slice(3)}</p>
+			<p class="my-0 text-base text-darkgrey">{new Date(meta.date).toDateString().slice(3)}</p>
 		{/if}
 
 		{#if meta.banner_img_url}
