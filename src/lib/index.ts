@@ -18,6 +18,7 @@ export type Work = {
 	slug: string;
 	title: string;
 	year: number;
+	date: string;
 	premiere: string;
 	dedication: string;
 	movements: string[];

@@ -1,0 +1,22 @@
+---
+title: Rhizomes
+year: 2025
+date: 2025-05-09
+premiere: 2025-05-09
+dedication: ''
+movements: []
+instrumentation: tenor sax, trumpet, live electronics
+duration: 7'
+banner_img_url: ''
+banner_img_alt: ''
+banner_img_caption: ''
+perusal_score_url: ''
+audio_url: ''
+audio_peaks_url: ''
+audio_caption: ''
+listed: true
+page: false
+tags:
+    chamber: true
+    electronic: true
+---

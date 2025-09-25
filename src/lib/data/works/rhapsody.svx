@@ -1,0 +1,21 @@
+---
+title: flotsam…/…jetsam
+year: 2025
+date: 2025-10-21
+premiere: 2025-10-21
+dedication: ''
+movements: []
+instrumentation: reed quintet
+duration: 7'30"
+banner_img_url: ''
+banner_img_alt: ''
+banner_img_caption: ''
+perusal_score_url: ''
+audio_url: ''
+audio_peaks_url: ''
+audio_caption: ''
+listed: false
+page: false
+tags:
+    chamber: true
+---

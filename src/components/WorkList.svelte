@@ -41,7 +41,7 @@
 						{#if (markedTitle[0] == '~') == (i % 2 == 1)}
 							{chunk}
 						{:else}
-							<div class="inline w-min rounded-sm bg-accent">{chunk}</div>
+							<div class="inline w-min rounded-sm bg-lightaccent">{chunk}</div>
 						{/if}
 					{/each}
 				</h3>
@@ -54,7 +54,7 @@
 				{#if (markedTitle[0] == '~') == (i % 2 == 1)}
 					{chunk}
 				{:else}
-					<div class="inline w-min rounded-sm bg-accent">{chunk}</div>
+					<div class="inline w-min rounded-sm bg-lightaccent">{chunk}</div>
 				{/if}
 			{/each}
 		</h3>
@@ -65,8 +65,6 @@
 			<p class="my-0 italic">{work.dedication}</p>
 		{/if}
 
-		<p class="my-0">
-			<em class="mr-4">{work.instrumentation}</em>|<em class="ml-4">{work.duration}</em>
-		</p>
+		<p class="my-0 italic">{work.instrumentation} &mdash; {work.duration}</p>
 	</div>
 </div>

@@ -44,7 +44,7 @@
 	);
 </script>
 
-<div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
+<div class="flex max-w-[40rem] flex-col gap-4 md:w-[40rem]">
 	<div class="flex flex-col gap-2">
 		<h1>Selected works</h1>
 
@@ -80,7 +80,7 @@
 						<h3>{work.year}</h3>
 					{/if}
 					{#if i != filteredWorks.length - 1}
-						<div class="h-full w-[1px] bg-grey"></div>
+						<div class="h-full w-0 border border-grey"></div>
 					{/if}
 				</div>
 				<div class="pb-3">

@@ -25,9 +25,9 @@
 	}
 </script>
 
-<div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
+<div class="flex max-w-[40rem] flex-col gap-4 md:w-[40rem]">
 	<div class="flex flex-col">
-		<h1 class="my-2 leading-[3rem]">
+		<h1>
 			{meta.title}
 			<div class="inline text-[1.8rem] font-normal">({meta.year})</div>
 		</h1>
@@ -36,12 +36,10 @@
 			<p class="my-0 italic text-darkgrey">{meta.dedication}</p>
 		{/if}
 
-		<p class="my-0 text-darkgrey">
-			<em class="mr-4">{meta.instrumentation}</em>|<em class="ml-4">{meta.duration}</em>
-		</p>
+		<p class="my-0 italic text-darkgrey">{meta.instrumentation} &mdash; {meta.duration}</p>
 
 		{#if meta.premiere}
-			<p class="my-0 italic text-darkgrey">
+			<p class="my-0 ml-8 italic text-darkgrey">
 				premièred {new Date(meta.premiere).toDateString().slice(3)}
 			</p>
 		{/if}

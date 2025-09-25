@@ -28,7 +28,7 @@
 		});
 
 		// wavesurfer.on('ready', function () {
-		// 	console.log(wavesurfer.exportPeaks({maxLength: 512}));
+		// 	console.log(wavesurfer.exportPeaks({ maxLength: 512 }));
 		// });
 
 		wavesurfer.on('pause', () => {
@@ -63,7 +63,7 @@
 	};
 </script>
 
-<div class="my-4 flex w-full flex-col gap-2 rounded-lg bg-white px-3 py-2 text-darkgrey shadow-md">
+<div class="my-4 flex w-full flex-col gap-2 rounded-md bg-white px-3 py-2 text-darkgrey shadow-md">
 	<div class="flex gap-2">
 		<button title={playing ? 'Pause audio' : 'Play audio'} onclick={pauseButton} class="my-4">
 			{#if playing}
@@ -95,13 +95,13 @@
 		<div id="waveform" class="relative w-full py-1">
 			<div
 				id="time"
-				class="pointer-events-none absolute inset-y-2/4 left-0 z-10 size-min w-[2.25rem] whitespace-nowrap rounded-tr-md bg-white/90 px-1 text-sm"
+				class="pointer-events-none absolute inset-y-2/3 left-0 z-10 size-min w-[2.25rem] whitespace-nowrap rounded-tr-md bg-white/90 px-1 text-sm"
 			>
 				{formattedTime}
 			</div>
 			<div
 				id="duration"
-				class="pointer-events-none absolute inset-y-2/4 right-0 z-10 size-min w-[2.25rem] rounded-tl-md bg-white/90 px-1 text-sm"
+				class="pointer-events-none absolute inset-y-2/3 right-0 z-10 size-min w-[2.25rem] rounded-tl-md bg-white/90 px-1 text-sm"
 			>
 				{formattedDuration}
 			</div>
@@ -124,7 +124,7 @@
 					clip-rule="evenodd"
 				/>
 			</svg>
-			<p class="my-0 text-base italic">{audio_caption}</p>
+			<p class="my-0 text-sm italic">{audio_caption}</p>
 		</div>
 	{/if}
 </div>

@@ -18,7 +18,7 @@ async function getJSON() {
 	}
 
 	items = items.sort(
-		(first, second) => new Date(second.premiere).getTime() - new Date(first.premiere).getTime()
+		(first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
 	);
 
 	return items;

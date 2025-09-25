@@ -39,7 +39,7 @@
 	);
 </script>
 
-<div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
+<div class="flex max-w-[40rem] flex-col gap-4 md:w-[40rem]">
 	<div class="flex flex-col gap-2">
 		<h1>Writings</h1>
 

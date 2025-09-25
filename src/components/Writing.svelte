@@ -8,9 +8,9 @@
 	const Content = content;
 </script>
 
-<div class="flex max-w-[42rem] flex-col gap-4 md:w-[42rem]">
+<div class="flex max-w-[40rem] flex-col gap-4 md:w-[40rem]">
 	<div class="flex flex-col">
-		<h1 class="my-2 leading-[3rem]">
+		<h1>
 			{meta.title}
 		</h1>
 

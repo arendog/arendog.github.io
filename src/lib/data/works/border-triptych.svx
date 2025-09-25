@@ -1,0 +1,21 @@
+---
+title: Border Triptych
+year: 2025
+date: 2025-06-07
+premiere: 2025-06-07
+dedication: 'for Elliott Park'
+movements: []
+instrumentation: G Northumbrian smallpipes, mixed ensemble
+duration: 4'
+banner_img_url: ''
+banner_img_alt: ''
+banner_img_caption: ''
+perusal_score_url: ''
+audio_url: ''
+audio_peaks_url: ''
+audio_caption: ''
+listed: true
+page: false
+tags:
+    chamber: true
+---
