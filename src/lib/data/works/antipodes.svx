@@ -9,7 +9,7 @@ instrumentation: orchestra
 duration: 4'
 banner_img_url: /images/antipodesbanner.jpg
 banner_img_alt: South Bay of Antipodes Island, New Zealand
-banner_img_caption: Antipodes Island South Bay
+banner_img_caption: Antipodes Island South Bay (LawrieM — public domain)
 perusal_score_url: /documents/antipodes.pdf
 audio_url: /audio/antipodes.mp3
 audio_peaks_url: /audio/antipodes-peaks.json

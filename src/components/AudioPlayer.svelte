@@ -15,7 +15,7 @@
 	let playing = $state(false);
 	let formattedDuration = $state('');
 	let formattedTime = $state('Loading...');
-	let volume = $state(0.7);
+	let volume = $state(0.75);
 
 	onMount(() => {
 		wavesurfer = WaveSurfer.create({
@@ -65,10 +65,10 @@
 	};
 
 	$effect(() => {
-    if (wavesurfer) {
-      wavesurfer.setVolume(volume);
-    }
-  });
+		if (wavesurfer) {
+			wavesurfer.setVolume(volume);
+		}
+	});
 </script>
 
 <div class="my-4 flex w-full flex-col gap-3 rounded-md bg-white px-3 py-2 text-darkgrey shadow-md">
@@ -115,7 +115,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="flex items-center gap-2">
 		<div class="flex items-center gap-1">
 			<svg
@@ -141,7 +141,7 @@
 					clip-rule="evenodd"
 				/>
 			</svg>
-			<Slider id="volume" name="volume" label="" min={0} max={1} bind:value={volume} step={0.1} />
+			<Slider id="volume" name="volume" label="" min={0} max={1} bind:value={volume} step={0.05} />
 		</div>
 
 		{#if audio_caption}
