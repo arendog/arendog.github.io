@@ -1,0 +1,20 @@
+<script lang="ts">
+	interface Props {
+		id: string;
+		name: string;
+		label: string;
+		min: number;
+		max: number;
+		value: number;
+		step: number;
+	}
+
+	let { id, name, label, min = 0, max = 1, value = $bindable(0.7), step = 0.1 }: Props = $props();
+</script>
+
+<div class="flex items-center gap-2">
+	{#if label}
+		<label class="text-sm text-darkgrey" for={id}>{label}</label>
+	{/if}
+	<input class="w-20 border-primary" type="range" {id} {name} {min} {max} bind:value {step}/>
+</div>
