@@ -78,7 +78,7 @@ p {
 }
 
 /* Range reset */
-input[type="range"] {
+input[type='range'] {
 	-webkit-appearance: none;
 	appearance: none;
 	background: transparent;
@@ -87,7 +87,7 @@ input[type="range"] {
 
 /* Range track */
 /* Chrome, Safari, Opera, and Edge Chromium */
-input[type="range"]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
 	/* Feed --val percentage in range style */
 	background: linear-gradient(
 		to right,
@@ -98,25 +98,23 @@ input[type="range"]::-webkit-slider-runnable-track {
 	);
 	height: 0.4rem;
 	border-radius: 0.2rem;
-	
 }
 
 /* Firefox */
-input[type="range"]::-moz-range-track {
+input[type='range']::-moz-range-track {
 	background: theme('colors.grey');
 	height: 0.4rem;
 	border-radius: 0.2rem;
 }
-input[type="range"]::-moz-range-progress {
-  background: theme('colors.primary');
-  height: 0.4rem;
-  border-radius: 0.2rem;
+input[type='range']::-moz-range-progress {
+	background: theme('colors.primary');
+	height: 0.4rem;
+	border-radius: 0.2rem;
 }
-
 
 /* Range thumb */
 /* Chrome, Safari, Opera, and Edge Chromium */
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
 	-webkit-appearance: none; /* Override default look */
 	appearance: none;
 	margin-top: -3.5px; /* Centers thumb on the track */
@@ -127,7 +125,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Firefox */
-input[type="range"]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
 	border: none;
 	background-color: theme('colors.primary');
 	height: 0.8rem;

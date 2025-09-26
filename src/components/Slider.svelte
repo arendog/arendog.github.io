@@ -16,5 +16,15 @@
 	{#if label}
 		<label class="text-sm text-darkgrey" for={id}>{label}</label>
 	{/if}
-	<input class="w-20 border-primary" type="range" {id} {name} {min} {max} bind:value {step}  style="--val: {value * 100}%;" />
+	<input
+		class="w-20 border-primary"
+		type="range"
+		{id}
+		{name}
+		{min}
+		{max}
+		bind:value
+		{step}
+		style="--val: {value * 100}%;"
+	/>
 </div>
