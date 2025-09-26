@@ -6,7 +6,7 @@ premiere: 2024-03-16
 dedication: ''
 movements: ["Shchedrin", "Roslavets", "Canon"]
 instrumentation: solo piano
-duration: c. 5'30"
+duration: 5'30"
 banner_img_url: ''
 banner_img_alt: ''
 banner_img_caption: ''
