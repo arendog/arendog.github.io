@@ -45,7 +45,9 @@
 			</svg>
 		</button>
 		<a href="/">
-			<h2 class="p-2 text-left leading-none md:text-right"><b>Alex Rennie</b><br />Composer</h2>
+			<h2 class="p-2 pr-0 text-left leading-none md:text-right">
+				<b>Alex Rennie</b><br />Composer
+			</h2>
 		</a>
 	</div>
 	<div class:show={menuOpen} class="flex hidden flex-col text-center md:block md:text-right">
