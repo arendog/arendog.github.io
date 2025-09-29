@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Biography from '$lib/data/biography.svx';
+	import Events from '../components/Events.svelte';
 </script>
 
 <svelte:head>
@@ -16,5 +17,5 @@
 		Randomly selected 3<sup>rd</sup> party placeholder image.
 	</p>
 	<Biography />
-	<h1>Upcoming events</h1>
+	<Events />
 </div>
