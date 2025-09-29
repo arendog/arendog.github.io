@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { stringify } from 'postcss';
-
 	interface Props {
 		id: string;
 		name: string;

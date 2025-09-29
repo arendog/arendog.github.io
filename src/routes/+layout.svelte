@@ -4,10 +4,9 @@
 	}
 
 	let { children }: Props = $props();
-	import { run } from 'svelte/legacy';
 
 	import '../app.postcss';
-	import { navigating } from '$app/stores';
+	import { beforeNavigate, afterNavigate } from '$app/navigation';
 
 	import Sidenav from '../components/Sidenav.svelte';
 
@@ -16,13 +15,12 @@
 
 	NProgress.configure({ showSpinner: false });
 
-	run(() => {
-		if ($navigating) {
-			NProgress.start();
-		}
-		if (!$navigating) {
-			NProgress.done();
-		}
+	beforeNavigate(() => {
+		NProgress.start();
+	});
+
+	afterNavigate(() => {
+		NProgress.done();
 	});
 </script>
 
