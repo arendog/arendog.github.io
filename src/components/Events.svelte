@@ -23,10 +23,10 @@
 </script>
 
 <h1>Upcoming events</h1>
-<div class="mt-4 grid grid-cols-[2rem_auto_2rem] items-center justify-stretch gap-2">
+<div class="mt-4 grid grid-cols-[2rem_auto_2rem] justify-stretch gap-2">
 	{#if monthNumber > currentMonthNumber}
 		<button
-			class="aspect-square w-min rounded-lg border-2 px-2 font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment"
+			class="mt-10 h-8 w-8 rounded-lg border-2 text-center font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment"
 			aria-label="Scroll back month"
 			onclick={() => (monthNumber -= 1)}>&lt;</button
 		>
@@ -44,7 +44,7 @@
 		</p>
 	</div>
 	<button
-		class="aspect-square w-min rounded-lg border-2 px-2 font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment"
+		class="mt-10 h-8 w-8 rounded-lg border-2 text-center font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment"
 		aria-label="Scroll forward month"
 		onclick={() => (monthNumber += 1)}>&gt;</button
 	>
