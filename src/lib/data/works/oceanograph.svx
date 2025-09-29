@@ -26,4 +26,4 @@ The theme of the programme was 'waves'. I decided to depict the ocean's chaos an
 
 The piece takes a human, shoreline perspective: one instrument carries a melody and the others hold pitches as an analogue for objects sporadically washing up. In the second section I use more intimate, fragile orchestration, blending air noises and high cello harmonics. The rigid pitch material is also altered, flattening one pitch to approximate the 7<sup>th</sup> partial, resulting in a resonant and ethereal timbre.
 
-Broadcast on ResonanceFM on 25<sup>th</sup> July 2025 and 30<sup>th</sup> July 2025 as part of Sound and Music's <a class="text-primary hover:underline" href="https://soundandmusic.org/post/the-sampler-mixtape-143/" target="_blank">*The Sampler Mixtape #143*</a>.
+Broadcast on ResonanceFM on 25<sup>th</sup> July 2025 and 30<sup>th</sup> July 2025 as part of Sound and Music's <a class="link" href="https://soundandmusic.org/post/the-sampler-mixtape-143/" target="_blank">*The Sampler Mixtape #143*</a>.
