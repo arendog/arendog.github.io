@@ -67,7 +67,7 @@
 		<a href="/contact" class="hover:underline">
 			<h3>Contact</h3>
 		</a>
-		<div class="my-1 flex justify-center gap-2 md:justify-end">
+		<!-- <div class="my-1 flex justify-center gap-2 md:justify-end">
 			<a href="/contact" aria-label="Instagram">
 				<svg
 					class="h-6 w-6 text-black"
@@ -104,6 +104,6 @@
 					/>
 				</svg>
 			</a>
-		</div>
+		</div> -->
 	</div>
 </div>

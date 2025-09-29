@@ -25,8 +25,8 @@
 </script>
 
 <svelte:head>
-	<meta name="description" content="Website of composer and saxophonist, Alex Rennie." />
-	<meta name="keywords" content="composition, saxophone, piano" />
+	<meta name="description" content="Website of composer and saxophonist Alex Rennie." />
+	<meta name="keywords" content="composition, saxophone, piano, jazz, classical" />
 </svelte:head>
 
 <div class="md:content-left top-0 content-center md:fixed md:mx-10 lg:mx-20">
