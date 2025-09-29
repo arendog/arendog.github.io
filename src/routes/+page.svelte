@@ -12,7 +12,9 @@
 		class="aspect-video w-full object-cover"
 		alt="Placeholder"
 	/>
-	<p class="m-0 mt-1 text-sm italic text-darkgrey">Randomly selected placeholder image. I am not responsible for content of image.</p>
+	<p class="m-0 mt-1 text-sm italic text-darkgrey">
+		Randomly selected 3<sup>rd</sup> party placeholder image.
+	</p>
 	<Biography />
 	<h1>Upcoming events</h1>
 </div>

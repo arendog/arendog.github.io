@@ -49,7 +49,7 @@
 		<h1>Selected works</h1>
 
 		<div class="flex flex-wrap gap-2">
-			<SearchFilter bind:searchTerm />
+			<SearchFilter bind:searchTerm label="Filter works by title" />
 			{#each Object.keys(searchTags) as key}
 				{#if filteredWorks.filter((work) => {
 					return work.tags[key as keyof WorkTags];
