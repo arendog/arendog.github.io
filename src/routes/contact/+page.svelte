@@ -13,8 +13,8 @@
 
 		<h2>Commissions</h2>
 		<p class="mt-0">
-			I have experience writing for a variety of ensembles and settings and would love to discuss
-			new commissions.
+			I have experience writing for a variety of ensembles and settings and would be happy to
+			discuss new commissions.
 		</p>
 
 		<h2>Performances</h2>

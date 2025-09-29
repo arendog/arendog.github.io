@@ -15,8 +15,10 @@
 
 	NProgress.configure({ showSpinner: false });
 
-	beforeNavigate(() => {
-		NProgress.start();
+	beforeNavigate((nav) => {
+		if (!nav.willUnload) {
+			NProgress.start();
+		}
 	});
 
 	afterNavigate(() => {
