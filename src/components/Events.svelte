@@ -22,17 +22,14 @@
 	let nextMonths = $derived(monthNames.slice(monthNumber % 12, (monthNumber % 12) + 3));
 </script>
 
-<h1>Upcoming events</h1>
+<h1 class="mt-4">Upcoming events</h1>
 <div class="mt-4 grid grid-cols-[2rem_auto_2rem] justify-stretch gap-2">
-	{#if monthNumber > currentMonthNumber}
-		<button
-			class="mt-10 h-8 w-8 rounded-lg border-2 text-center font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment"
-			aria-label="Scroll back month"
-			onclick={() => (monthNumber -= 1)}>&lt;</button
-		>
-	{:else}
-		<div></div>
-	{/if}
+	<button
+		class="mt-10 h-8 w-8 rounded-lg border-2 p-0 text-center font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment disabled:border-grey disabled:text-grey disabled:hover:bg-transparent"
+		aria-label="Scroll back month"
+		onclick={() => (monthNumber -= 1)}
+		disabled={monthNumber <= currentMonthNumber}>&lt;</button
+	>
 	<div class="grid-rows-[auto, auto] grid grid-cols-2 gap-2 text-center sm:grid-cols-3">
 		<p class="m-0 font-semibold">{nextMonths[0]}</p>
 		<p class="m-0 font-semibold">{nextMonths[1]}</p>
