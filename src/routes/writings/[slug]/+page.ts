@@ -13,7 +13,7 @@ const modules = import.meta.glob<WritingModule>(
 	'/src/lib/data/writings/*.svx'
 );
 
-export const prerender = true;
+export const prerender = 'auto';
 
 // generate slugs
 export async function entries() {
