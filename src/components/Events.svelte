@@ -41,8 +41,9 @@
 		</p>
 	</div>
 	<button
-		class="mt-10 h-8 w-8 rounded-lg border-2 text-center font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment"
+		class="mt-10 h-8 w-8 rounded-lg border-2 p-0 text-center font-bold text-primary hover:border-primary hover:bg-primary hover:text-parchment disabled:border-grey disabled:text-grey disabled:hover:bg-transparent"
 		aria-label="Scroll forward month"
-		onclick={() => (monthNumber += 1)}>&gt;</button
+		onclick={() => (monthNumber += 1)}
+		disabled={monthNumber >= currentMonthNumber + 10}>&gt;</button
 	>
 </div>

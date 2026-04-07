@@ -1,0 +1,23 @@
+---
+title: flotsam / jetsam
+year: 2026
+date: 2026-01-20
+premiere: 2024-02-24
+dedication: for Quatuor Bozzini
+movements: []
+instrumentation: piano, string quartet, fixed electronics
+duration: 5'
+banner_img_url:
+banner_img_alt:
+banner_img_caption:
+perusal_score_url:
+audio_url:
+audio_peaks_url:
+audio_caption:
+listed: true
+page: false
+tags:
+    chamber: true
+    electronics: true
+---
+
