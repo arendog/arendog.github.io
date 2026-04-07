@@ -45,12 +45,10 @@ export async function load({ params }) {
 
 	const work = await loader();
 
-	if (work.metadata?.page) {
-		return {
-			content: work.default,
-			meta: work.metadata
-		};
-	}
+	return {
+		content: work.default,
+		meta: work.metadata
+	};
 
 	throw error(404, 'Page not found');
 }

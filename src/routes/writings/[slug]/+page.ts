@@ -45,12 +45,12 @@ export async function load({ params }) {
 
 	const writing = await loader();
 
-	if (writing.metadata?.page) {
-		return {
-			content: writing.default,
-			meta: writing.metadata
-		};
-	}
+	
+	return {
+		content: writing.default,
+		meta: writing.metadata
+	};
+	
 
 	throw error(404, 'Page not found');
 }
