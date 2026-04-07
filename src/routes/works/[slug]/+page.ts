@@ -9,17 +9,13 @@ type WorkModule = {
 };
 
 // strongly type the glob
-const modules = import.meta.glob<WorkModule>(
-	'/src/lib/data/works/*.svx'
-);
+const modules = import.meta.glob<WorkModule>('/src/lib/data/works/*.svx');
 
-export const prerender = 'auto';
+export const prerender = true;
 
 // generate slugs
 export async function entries() {
-	const modules = import.meta.glob<WorkModule>(
-		'/src/lib/data/works/*.svx'
-	);
+	const modules = import.meta.glob<WorkModule>('/src/lib/data/works/*.svx');
 
 	const entries = [];
 
