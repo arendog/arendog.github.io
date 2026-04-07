@@ -53,7 +53,10 @@
 	<div class:show={menuOpen} class="flex hidden flex-col text-center md:block md:text-right">
 		<!-- switch to biography when written -->
 		<a href="/" class="hover:underline">
-			<h3>About</h3>
+			<h3>Home</h3>
+		</a>
+		<a href="/biography" class="hover:underline">
+			<h3>Biography</h3>
 		</a>
 		<a href="/works" class="hover:underline">
 			<h3>Works</h3>

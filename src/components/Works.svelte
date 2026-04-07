@@ -17,7 +17,7 @@
 		choral: false,
 		vocal: false,
 		opera: false,
-		electronic: false
+		electronics: false
 	});
 
 	let searchTerm = $state('');

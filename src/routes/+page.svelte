@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Biography from '$lib/data/biography.svx';
-	import Events from '../components/Events.svelte';
 </script>
 
 <svelte:head>
@@ -15,5 +14,4 @@
 	/>
 	<p class="m-0 mt-1 text-sm italic text-darkgrey">Placeholder image</p>
 	<Biography />
-	<Events />
 </div>

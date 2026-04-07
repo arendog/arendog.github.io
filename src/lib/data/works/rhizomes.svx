@@ -18,5 +18,5 @@ listed: true
 page: false
 tags:
     chamber: true
-    electronic: true
+    electronics: true
 ---
