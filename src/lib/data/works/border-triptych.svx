@@ -5,7 +5,7 @@ date: 2025-06-07
 premiere: 2025-06-07
 dedication: 'for Elliott Park'
 movements: []
-instrumentation: G Northumbrian smallpipes, mixed ensemble
+instrumentation: Northumbrian smallpipes in ‘G’, mixed ensemble
 duration: 4'
 banner_img_url: ''
 banner_img_alt: ''

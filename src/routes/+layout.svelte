@@ -4,10 +4,9 @@
 	}
 
 	let { children }: Props = $props();
-	import { run } from 'svelte/legacy';
 
 	import '../app.postcss';
-	import { navigating } from '$app/stores';
+	import { beforeNavigate, afterNavigate } from '$app/navigation';
 
 	import Sidenav from '../components/Sidenav.svelte';
 
@@ -16,19 +15,20 @@
 
 	NProgress.configure({ showSpinner: false });
 
-	run(() => {
-		if ($navigating) {
+	beforeNavigate((nav) => {
+		if (!nav.willUnload) {
 			NProgress.start();
 		}
-		if (!$navigating) {
-			NProgress.done();
-		}
+	});
+
+	afterNavigate(() => {
+		NProgress.done();
 	});
 </script>
 
 <svelte:head>
-	<meta name="description" content="Website of composer and saxophonist, Alex Rennie." />
-	<meta name="keywords" content="composition, saxophone, piano" />
+	<meta name="description" content="Website of composer and saxophonist Alex Rennie." />
+	<meta name="keywords" content="composition, saxophone, piano, jazz, classical" />
 </svelte:head>
 
 <div class="md:content-left top-0 content-center md:fixed md:mx-10 lg:mx-20">

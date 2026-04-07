@@ -44,7 +44,7 @@
 		<h1>Writings</h1>
 
 		<div class="flex flex-wrap gap-2">
-			<SearchFilter bind:searchTerm />
+			<SearchFilter bind:searchTerm label="Filter writings by title" />
 			{#each Object.keys(searchTags) as key}
 				{#if filteredWritings.filter((writing) => {
 					return writing.tags[key as keyof WritingTags];

@@ -6,7 +6,7 @@ export type WorkTags = {
 	choral: boolean;
 	vocal: boolean;
 	opera: boolean;
-	electronic: boolean;
+	electronics: boolean;
 };
 
 export type WritingTags = {

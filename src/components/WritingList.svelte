@@ -8,15 +8,17 @@
 
 	let regexSearch = $derived(new RegExp(searchWords.join('|'), 'gi'));
 	let markedTitle = $derived(
-		searchWords.length ? writing.title.replace(regexSearch, '~$&~') : writing.title
+		searchWords.length
+			? writing.title.replace(regexSearch, '~$&~').replaceAll('~~', '')
+			: writing.title
 	);
 	let titleChunks = $derived(markedTitle.split('~').filter((i: string) => i));
 </script>
 
 <div class="flex flex-col">
 	{#if writing.page}
-		<a href={'writings/' + writing.slug}>
-			<div class="flex items-center text-primary hover:underline">
+		<a class="link" href={'writings/' + writing.slug}>
+			<div class="flex items-center">
 				<!-- link icon: -->
 				<!-- <svg
 					class="h-6 w-6"

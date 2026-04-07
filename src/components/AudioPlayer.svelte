@@ -185,7 +185,16 @@
 					</svg>
 				{/if}
 			</button>
-			<Slider id="volume" name="volume" label="" min={0} max={1} bind:value={volume} step={0.05} />
+			<Slider
+				id="volume"
+				name="volume"
+				label="volume"
+				min={0}
+				max={1}
+				displayLabel={false}
+				bind:value={volume}
+				step={0.05}
+			/>
 		</div>
 
 		{#if audio_caption}
