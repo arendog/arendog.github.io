@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 
-type WorkModule = {
+type WritingModule = {
 	default: any;
 	metadata: {
 		page?: boolean;
@@ -9,18 +9,33 @@ type WorkModule = {
 };
 
 // strongly type the glob
-const modules = import.meta.glob<WorkModule>(
+const modules = import.meta.glob<WritingModule>(
 	'/src/lib/data/writings/*.svx'
 );
 
 export const prerender = true;
 
 // generate slugs
-export function entries() {
-	return Object.keys(modules).map((path) => {
-		const slug = path.split('/').pop()!.replace('.svx', '');
-		return { slug };
-	});
+export async function entries() {
+	const modules = import.meta.glob<WritingModule>(
+		'/src/lib/data/works/*.svx'
+	);
+
+	const entries = [];
+
+	for (const [path, loader] of Object.entries(modules)) {
+		const mod = await loader();
+
+		if (mod.metadata?.page) {
+			const parts = path.split('/');
+			const filename = parts[parts.length - 1];
+			const slug = filename.replace('.svx', '');
+
+			entries.push({ slug });
+		}
+	}
+
+	return entries;
 }
 
 export async function load({ params }) {
