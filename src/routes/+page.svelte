@@ -3,8 +3,8 @@
 
     const INC_FAST_SPEED = 0.06;
     const INC_SLOW_SPEED = 0.02;
-    const AMPLITUDE_X = 2;
-    const AMPLITUDE_Y = 2;
+    const AMPLITUDE_X = 1;
+    const AMPLITUDE_Y = 1;
 
     const sketch: Sketch = (p) => {
         let fontTactile: p5.Font;
@@ -15,17 +15,21 @@
         let incSlow = 0;
 
         p.setup = async () => {
-            p.createCanvas(340, 140);
+            p.createCanvas(330, 150);
             
 
             fontTactile = await p.loadFont('/fonts/SyneTactile-Regular.ttf');
             fontMono = await p.loadFont('/fonts/SyneMono-Regular.ttf');
 
-            p.stroke(0);
-            p.strokeWeight(2);
-            p.strokeJoin(p.ROUND);
-            p.strokeCap(p.ROUND);
-            p.noFill();
+            p.fill(0);
+            p.noStroke();
+
+            // p.noFill();
+            // p.stroke(0);
+            // p.strokeWeight(2);
+            // p.strokeJoin(p.ROUND);
+            // p.strokeCap(p.ROUND);
+            
 
             p.textSize(72);
             const contours1 = fontTactile.textToContours(
@@ -38,7 +42,7 @@
             p.textSize(48);
             const contours2 = fontMono.textToContours(
                 'composer',
-                65,
+                60,
                 120,
                 { sampleFactor: 0.5 }
             );
@@ -47,7 +51,7 @@
         };
 
         p.draw = () => {
-            p.background(255);
+            p.background(p.color("#f2f2f2"));
 
             incSlow += INC_SLOW_SPEED;
             incFast = incSlow;

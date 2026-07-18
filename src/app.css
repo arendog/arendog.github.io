@@ -37,3 +37,9 @@ p {
 	margin: 1rem 0;
 }
 
+
+
+@theme {
+  --color-accent: #ff0080;
+  --color-background: #f2f2f2;
+}
