@@ -1,5 +1,6 @@
 <script lang="ts">
     import P5Sketch, { type Sketch } from '@sveltecraft/p5-svelte';
+    import type p5 from 'p5';
 
     const INC_FAST_SPEED = 0.1;
     const INC_SLOW_SPEED = 0.02;
@@ -9,7 +10,7 @@
     const sketch: Sketch = (p) => {
         let fontTactile: p5.Font;
         let fontMono: p5.Font;
-        let contours: p5.Vector[][] = [];
+        let contours: { x: number, y: number, alpha: number }[][] = [];
 
         let incFast = 0;
         let incSlow = 0;
