@@ -1,7 +1,7 @@
 <script lang="ts">
     import P5Sketch, { type Sketch } from '@sveltecraft/p5-svelte';
 
-    const INC_FAST_SPEED = 0.06;
+    const INC_FAST_SPEED = 0.1;
     const INC_SLOW_SPEED = 0.02;
     const AMPLITUDE_X = 1;
     const AMPLITUDE_Y = 1;

@@ -3,43 +3,62 @@
 @plugin '@tailwindcss/typography';
 
 @font-face {
-	font-family: SyneMono;
-	src: url('/fonts/SyneMono-Regular.wpff2') format('woff2');
+	font-family: Syne Mono;
+	src: url('/fonts/SyneMono-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: SyneTactile;
+	font-family: Syne Tactile;
 	src: url('/fonts/SyneTactile-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
 
+@font-face {
+	font-family: Happy Times;
+	src: url('/fonts/HappyTimes-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
 
-h1 {
-	font-size: 2.4rem;
-	line-height: 3.2rem;
+@font-face {
+	font-family: Happy Times;
+	src: url('/fonts/HappyTimes-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Happy Times;
+	src: url('/fonts/HappyTimes-Bold.woff2') format('woff2');
 	font-weight: bold;
+	font-style: normal;
 }
-h2 {
-	font-size: 1.6rem;
-	line-height: 2.5rem;
-}
-h3 {
-	font-size: 1.3rem;
-	line-height: 1.8rem;
-}
-
-p {
-	font-size: 1.0625rem;
-	line-height: 1.5em;
-	margin: 1rem 0;
-}
-
-
 
 @theme {
   --color-accent: #ff0080;
   --color-background: #f2f2f2;
+
+  --font-syne-mono: Syne Mono, Courier New, Courier, monospace;
+  --font-syne-tactile: Syne Tactile, sans-serif;
+  --font-happy-times: Happy Times, Times New Roman, Times, serif;
 }
+
+h1 {
+	font-family: Syne Mono, Courier New, Courier, monospace;
+	font-size: 24px;
+}
+h2 {
+	font-size: 16px;
+}
+
+
+p {
+	font-family: Happy Times, Times New Roman, Times, serif;
+	font-size: 13px;
+}
+
+
+
