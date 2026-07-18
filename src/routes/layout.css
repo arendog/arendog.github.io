@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+	font-family: SyneMono;
+	src: url('/fonts/SyneMono-Regular.wpff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: SyneTactile;
+	src: url('/fonts/SyneTactile-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+h1 {
+	font-size: 2.4rem;
+	line-height: 3.2rem;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.6rem;
+	line-height: 2.5rem;
+}
+h3 {
+	font-size: 1.3rem;
+	line-height: 1.8rem;
+}
+
+p {
+	font-size: 1.0625rem;
+	line-height: 1.5em;
+	margin: 1rem 0;
+}
+
+background-color: #ccc;
