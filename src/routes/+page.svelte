@@ -3,8 +3,8 @@
 
     const INC_FAST_SPEED = 0.06;
     const INC_SLOW_SPEED = 0.02;
-    const AMPLITUDE_X = 5;
-    const AMPLITUDE_Y = 5;
+    const AMPLITUDE_X = 2;
+    const AMPLITUDE_Y = 2;
 
     const sketch: Sketch = (p) => {
         let fontTactile: p5.Font;
@@ -61,8 +61,8 @@
                     incFast += INC_FAST_SPEED;
 
                     p.vertex(
-                        point.x + p.noise(incFast) * AMPLITUDE_X,
-                        point.y + p.noise(incFast) * AMPLITUDE_Y
+                        point.x + p.cos(incFast) * AMPLITUDE_X,
+                        point.y + p.sin(incFast) * AMPLITUDE_Y
                     );
                 }
 
