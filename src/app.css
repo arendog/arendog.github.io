@@ -3,10 +3,10 @@
 @plugin '@tailwindcss/typography';
 
 @utility link-circle {
-		@apply bg-[url("images/circle-select.svg")];
-		@apply bg-center;
-		@apply bg-no-repeat;
-		@apply bg-contain;
+	@apply bg-[url("../images/circle-select.svg")];
+	@apply bg-center;
+	@apply bg-no-repeat;
+	@apply bg-contain;
 }
 
 @font-face {
@@ -45,16 +45,20 @@
 }
 
 @theme {
-  --color-accent: #ff0080;
-  --color-background: #f2f2f2;
+	--color-accent: #ff0080;
+	--color-background: #f2f2f2;
 
-  --font-syne-mono: 'Syne Mono', Courier New, Courier, monospace;
-  --font-syne-tactile: 'Syne Tactile', sans-serif;
-  --font-happy-times: Happy Times, Times New Roman, Times, serif;
+	--font-syne-mono: 'Syne Mono', Courier New, Courier, monospace;
+	--font-syne-tactile: 'Syne Tactile', sans-serif;
+	--font-happy-times: Happy Times, Times New Roman, Times, serif;
 }
 
 h1 {
-	font-family: Syne Mono, Courier New, Courier, monospace;
+	font-family:
+		Syne Mono,
+		Courier New,
+		Courier,
+		monospace;
 	font-size: 20px;
 	line-height: 26px;
 }
@@ -62,13 +66,22 @@ h2 {
 	font-size: 16px;
 }
 
-
 p {
-	font-family: Happy Times, Times New Roman, Times, serif;
+	font-family:
+		Happy Times,
+		Times New Roman,
+		Times,
+		serif;
 	font-size: 11px;
 	line-height: 14px;
 	text-align: justify;
 }
 
-
-
+.navi::after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -1; /*hide image*/
+	content: url('../images/circle-select.svg'); /*load image*/
+}

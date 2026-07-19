@@ -16,7 +16,7 @@
 {#if page.url.pathname == '/'}
 	{@render children()}
 {:else}
-	<div class="max-w-200 ml-[calc(50%-400px)]">
+	<div class="mb-8 ml-[calc(50%-400px)] max-w-200">
 		<Nav />
 		{@render children()}
 	</div>
