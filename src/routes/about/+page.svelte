@@ -1,4 +1,4 @@
-<div class="mt-12 grid grid-cols-2 gap-20">
+<div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-20">
 	<div>
 		<img alt="placeholder" src="https://picsum.photos/640/360?grayscale&blur" />
 		<div class="mt-20 ml-12 grid grid-rows-3 gap-16">
@@ -16,7 +16,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mt-30">
+	<div class="mt-16 lg:mt-30">
 		<div class="flex flex-col gap-4">
 			<h1>about</h1>
 

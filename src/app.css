@@ -51,6 +51,8 @@
 	--font-syne-mono: 'Syne Mono', Courier New, Courier, monospace;
 	--font-syne-tactile: 'Syne Tactile', sans-serif;
 	--font-happy-times: Happy Times, Times New Roman, Times, serif;
+
+	--breakpoint-lg: 900px;
 }
 
 h1 {
@@ -77,11 +79,11 @@ p {
 	text-align: justify;
 }
 
-/* .navi::after {
+.navi::after {
 	position: absolute;
 	width: 0;
 	height: 0;
 	overflow: hidden;
 	z-index: -1;
 	content: url('$lib/assets/circle-select.svg');
-} */
+}
