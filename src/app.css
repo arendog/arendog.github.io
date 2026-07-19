@@ -3,7 +3,7 @@
 @plugin '@tailwindcss/typography';
 
 @utility link-circle {
-	@apply bg-[url("../images/circle-select.svg")];
+	@apply bg-[url("$lib/assets/circle-select.svg")];
 	@apply bg-center;
 	@apply bg-no-repeat;
 	@apply bg-contain;
@@ -83,5 +83,5 @@ p {
 	height: 0;
 	overflow: hidden;
 	z-index: -1; /*hide image*/
-	content: url('../images/circle-select.svg'); /*load image*/
+	content: url('$lib/assets/circle-select.svg'); /*load image*/
 }
