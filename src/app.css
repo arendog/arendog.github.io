@@ -9,6 +9,11 @@
 	@apply bg-contain;
 }
 
+@utility link-no-decoration {
+	@apply text-black;
+	@apply no-underline;
+}
+
 @font-face {
 	font-family: Syne Mono;
 	src: url('/fonts/SyneMono-Regular.woff2') format('woff2');
@@ -77,6 +82,11 @@ p {
 	font-size: 11px;
 	line-height: 14px;
 	text-align: justify;
+}
+
+a {
+	color: blue;
+	text-decoration: underline;
 }
 
 .navi::after {
