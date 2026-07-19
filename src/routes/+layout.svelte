@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import { page } from '$app/state';
+	import Nav from '../components/Nav.svelte';
 
 	let { children } = $props();
 </script>
@@ -11,4 +13,11 @@
 	<meta name="keywords" content="composition, saxophone, piano, jazz, classical" />
 </svelte:head>
 
-{@render children()}
+{#if page.url.pathname == '/'}
+	{@render children()}
+{:else}
+	<div class="max-w-200 ml-[calc(50%-400px)]">
+		<Nav />
+		{@render children()}
+	</div>
+{/if}
