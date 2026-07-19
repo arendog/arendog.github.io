@@ -83,6 +83,6 @@
 	<title>Alex Rennie - composer</title>
 </svelte:head>
 
-<a class="flex min-w-screen min-h-screen items-center justify-center" rel="external" href="/about">
+<a title="Click to enter" class="flex min-w-screen min-h-screen items-center justify-center" rel="external" href="/about">
     <P5Sketch {sketch} />
 </a>

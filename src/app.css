@@ -1,6 +1,13 @@
-@import 'tailwindcss';
+@import 'tailwindcss' important;
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@utility link-circle {
+		@apply bg-[url("images/circle-select.svg")];
+		@apply bg-center;
+		@apply bg-no-repeat;
+		@apply bg-contain;
+}
 
 @font-face {
 	font-family: Syne Mono;
@@ -41,14 +48,15 @@
   --color-accent: #ff0080;
   --color-background: #f2f2f2;
 
-  --font-syne-mono: Syne Mono, Courier New, Courier, monospace;
-  --font-syne-tactile: Syne Tactile, sans-serif;
+  --font-syne-mono: 'Syne Mono', Courier New, Courier, monospace;
+  --font-syne-tactile: 'Syne Tactile', sans-serif;
   --font-happy-times: Happy Times, Times New Roman, Times, serif;
 }
 
 h1 {
 	font-family: Syne Mono, Courier New, Courier, monospace;
-	font-size: 24px;
+	font-size: 20px;
+	line-height: 26px;
 }
 h2 {
 	font-size: 16px;
@@ -57,7 +65,9 @@ h2 {
 
 p {
 	font-family: Happy Times, Times New Roman, Times, serif;
-	font-size: 13px;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: justify;
 }
 
 
