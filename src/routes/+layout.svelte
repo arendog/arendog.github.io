@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import favicon from '$lib/assets/favicon.svg';
 	import { page } from '$app/state';
 	import Nav from '$lib/components/Nav.svelte';
 
@@ -7,12 +8,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" type="image/png" href="/src/lib/assets/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/src/lib/assets/favicon.svg" />
-	<link rel="shortcut icon" href="/src/lib/assets/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/src/lib/assets/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-	<link rel="manifest" href="/src/lib/assets/site.webmanifest" />
+	<link rel="icon" href={favicon} />
 	<meta name="description" content="Website of composer and saxophonist Alex Rennie." />
 	<meta name="keywords" content="composition, saxophone, piano, jazz, classical" />
 </svelte:head>
