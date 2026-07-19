@@ -1,6 +1,6 @@
 <div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-20">
 	<div>
-		<img alt="placeholder" src="https://picsum.photos/640/360?grayscale&blur" />
+		<enhanced:img alt="placeholder" src="/static/images/placeholder.webp" />
 		<div class="mt-20 ml-12 grid grid-rows-3 gap-16">
 			<div>
 				<p class="italic">“The quick brown fox jumps over the lazy dog.”</p>
