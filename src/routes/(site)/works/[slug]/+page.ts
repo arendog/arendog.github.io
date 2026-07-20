@@ -24,6 +24,8 @@ export function load({ params }) {
 
 	if (!work) {
 		throw error(404, 'Work not found');
+	} else if (!work.metadata.page) {
+		throw error(404, 'Work not found');
 	}
 	return {
 		metadata: work.metadata,

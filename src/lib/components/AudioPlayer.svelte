@@ -86,7 +86,7 @@
 	});
 </script>
 
-<div class="my-1 flex w-full flex-col gap-3 rounded-md bg-white px-3 py-3 shadow-md">
+<div class="my-1 flex w-full flex-col gap-1 rounded-md bg-white px-3 py-3 shadow-md">
 	<div class="flex gap-2">
 		<button title={playing ? 'Pause' : 'Play'} onclick={pauseButton} class="my-2">
 			{#if playing}
@@ -206,7 +206,7 @@
 		</div>
 
 		{#if audio_caption}
-			<p class="my-1 text-left leading-none italic">{audio_caption}</p>
+			<p class="text-left leading-4 italic">{audio_caption}</p>
 		{/if}
 	</div>
 </div>
