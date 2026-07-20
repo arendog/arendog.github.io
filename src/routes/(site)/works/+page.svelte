@@ -2,9 +2,9 @@
 	let { data } = $props();
 </script>
 
-<h1>Selected works</h1>
+<h1>selected works</h1>
 
-<div class="my-8 space-y-4">
+<div class="my-4 space-y-4">
 	{#each data.works as work (work.slug)}
 		<div class="flex w-80 items-baseline justify-between font-syne-mono">
 			{#if work.page}

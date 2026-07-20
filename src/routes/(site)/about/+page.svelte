@@ -1,18 +1,14 @@
 <div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-20">
 	<div>
 		<enhanced:img alt="placeholder" src="/static/images/placeholder.webp" />
-		<div class="mt-20 ml-12 grid grid-rows-3 gap-16">
+		<div class="mt-20 ml-12 flex flex-col gap-16">
 			<div>
-				<p class="italic">“The quick brown fox jumps over the lazy dog.”</p>
+				<p class="italic">“Cwm fjord veg balks nth pyx quiz.”</p>
 				<p class="pt-2 text-right">—Reference no. 1</p>
 			</div>
 			<div>
-				<p class="italic">“Cwm fjord veg balks nth pyx quiz.”</p>
-				<p class="pt-2 text-right">—Reference no. 2</p>
-			</div>
-			<div>
 				<p class="italic">“Schwarzkopf vexed Iraq big-time in July.”</p>
-				<p class="pt-2 text-right">—Reference no. 3</p>
+				<p class="pt-2 text-right">—Reference no. 2</p>
 			</div>
 		</div>
 	</div>
