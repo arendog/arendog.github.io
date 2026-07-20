@@ -1,0 +1,17 @@
+---
+slug: near-malabata-tangier 
+title: near Malabata, Tangier
+date: 2026-08-02
+performances: ['']
+caption: for the Yanfie Trio
+movements: ['']
+instrumentation: clarinet, piano, violin
+duration: 8'
+banner_img: ['https://press.christies.com/wp-content/uploads/2024/02/7c4fd3cca8d33bd59875fc4e1cceee3b-l.jpg.webp', 'Painting of a landscape', 'Landscape near Malabata, Tangier by Francis Bacon']
+audio: ['', '', '']
+score: ['', '']
+listed: true
+page: false
+tags:
+    chamber: true
+---

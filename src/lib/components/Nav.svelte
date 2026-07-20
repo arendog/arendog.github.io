@@ -9,7 +9,7 @@
 <div class="navi my-8 flex flex-col items-center justify-between gap-4 lg:flex-row">
 	<a href="/" rel="external" class="cap-2 flex flex-col items-center link-no-decoration">
 		<h1 class="font-syne-tactile text-[28px] leading-none">alex rennie</h1>
-		<h1 class="leading-none">composer</h1>
+		<h2 class="leading-none">composer</h2>
 	</a>
 	<div class="flex w-full max-w-92 min-w-64 grow content-center items-center justify-between">
 		<a

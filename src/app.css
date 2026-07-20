@@ -14,6 +14,18 @@
 	@apply no-underline;
 }
 
+@utility link-button {
+	@apply p-2;
+	@apply border-2;
+	@apply text-[blue];
+	@apply text-center;
+	@apply no-underline;
+	@apply border-[blue];
+	@apply rounded-full;
+	@apply hover:bg-[blue];
+	@apply hover:text-white;
+}
+
 @font-face {
 	font-family: Syne Mono;
 	src: url('/fonts/SyneMono-Regular.woff2') format('woff2');
@@ -66,11 +78,26 @@ h1 {
 		Courier New,
 		Courier,
 		monospace;
+	font-size: 30px;
+	line-height: 40px;
+}
+h2 {
+	font-family:
+		Syne Mono,
+		Courier New,
+		Courier,
+		monospace;
 	font-size: 20px;
 	line-height: 26px;
 }
-h2 {
+h3 {
+	font-family:
+		Syne Mono,
+		Courier New,
+		Courier,
+		monospace;
 	font-size: 16px;
+	line-height: 21px;
 }
 
 p {
