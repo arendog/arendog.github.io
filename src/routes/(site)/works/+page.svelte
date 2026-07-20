@@ -2,6 +2,8 @@
 	let { data } = $props();
 </script>
 
+<h1>Selected works</h1>
+
 <div class="space-y-2">
 	{#each data.works as work (work.slug)}
 		<a

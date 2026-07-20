@@ -24,30 +24,17 @@
 
 <div class="flex items-center gap-2">
 	{#if displayLabel}
-		<label class="text-darkgrey text-sm" for={id}>{label}</label>
-		<input
-			class="border-primary w-20"
-			type="range"
-			{id}
-			{name}
-			{min}
-			{max}
-			bind:value
-			{step}
-			style="--val: {value * 100}%;"
-		/>
-	{:else}
-		<input
-			class="border-primary w-20"
-			aria-label={label}
-			type="range"
-			{id}
-			{name}
-			{min}
-			{max}
-			bind:value
-			{step}
-			style="--val: {value * 100}%;"
-		/>
+		<label for={id}><p class="text-sm">{label}</p></label>
 	{/if}
+	<input
+		class="w-20 border-primary"
+		type="range"
+		{id}
+		{name}
+		{min}
+		{max}
+		bind:value
+		{step}
+		style="--val: {value * 100}%;"
+	/>
 </div>

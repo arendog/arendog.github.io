@@ -2,6 +2,18 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@theme {
+	--color-accent: #ff0080;
+	--color-primary: #0800ff;
+	--color-background: #f2f2f2;
+
+	--font-syne-mono: 'Syne Mono', Courier New, Courier, monospace;
+	--font-syne-tactile: 'Syne Tactile', sans-serif;
+	--font-happy-times: Happy Times, Times New Roman, Times, serif;
+
+	--breakpoint-lg: 900px;
+}
+
 @utility link-circle {
 	@apply bg-[url("$lib/assets/circle-select.svg")];
 	@apply bg-center;
@@ -17,12 +29,12 @@
 @utility link-button {
 	@apply p-2;
 	@apply border-2;
-	@apply text-[blue];
+	@apply text-primary;
 	@apply text-center;
 	@apply no-underline;
-	@apply border-[blue];
+	@apply border-primary;
 	@apply rounded-full;
-	@apply hover:bg-[blue];
+	@apply hover:bg-primary;
 	@apply hover:text-white;
 }
 
@@ -59,17 +71,6 @@
 	src: url('/fonts/HappyTimes-Bold.woff2') format('woff2');
 	font-weight: bold;
 	font-style: normal;
-}
-
-@theme {
-	--color-accent: #ff0080;
-	--color-background: #f2f2f2;
-
-	--font-syne-mono: 'Syne Mono', Courier New, Courier, monospace;
-	--font-syne-tactile: 'Syne Tactile', sans-serif;
-	--font-happy-times: Happy Times, Times New Roman, Times, serif;
-
-	--breakpoint-lg: 900px;
 }
 
 h1 {
@@ -112,7 +113,7 @@ p {
 }
 
 a {
-	color: blue;
+	color: var(--color-primary);
 	text-decoration: underline;
 }
 
