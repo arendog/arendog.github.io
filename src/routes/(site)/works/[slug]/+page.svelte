@@ -28,7 +28,7 @@
 	<title>{data.metadata.title} - Alex Rennie</title>
 </svelte:head>
 
-<div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-20">
+<div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-12">
 	<div class="flex flex-col items-center gap-8">
 		{#if work.banner_img.url}
 			<div>
