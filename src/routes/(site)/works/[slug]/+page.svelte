@@ -3,7 +3,9 @@
 
 	let { data } = $props();
 
+	// svelte-ignore state_referenced_locally
 	const Content = data.Content;
+	// svelte-ignore state_referenced_locally
 	const work = data.metadata;
 
 	async function loadPeaks(url: string) {
@@ -26,7 +28,7 @@
 	<div class="flex flex-col items-center gap-8">
 		{#if work.banner_img.url}
 			<div>
-				<img class="mt-4" src={work.banner_img.url} alt={work.banner_img.alt} />
+				<img src={work.banner_img.url} alt={work.banner_img.alt} />
 				<p class="my-1 text-left italic">{work.banner_img.caption}</p>
 			</div>
 		{/if}
@@ -84,7 +86,7 @@
 		{/if}
 	</div>
 
-	<div class="mt-16 flex flex-col gap-6 lg:mt-30">
+	<div class="mt-8 flex flex-col gap-6 lg:mt-30">
 		<div class="flex flex-col gap-1">
 			<h1 class="mb-1 leading-8">{work.title} ({new Date(work.date).getFullYear()})</h1>
 			{#if work.caption}

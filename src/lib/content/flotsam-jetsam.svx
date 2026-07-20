@@ -11,7 +11,7 @@ banner_img: {url: '/images/flotsambanner.png', alt: '', caption: ''}
 audio: {url: '/audio/flotsam-jetsam.mp3', peaks_url: '/audio/flotsam-jetsam-peaks.json', caption: 'Excerpt from flotsam / jetsam, Bozzini Quartet'}
 score: {url: '/documents/flotsam-jetsam.pdf', caption: 'Score excerpt'}
 listed: true
-page: false
+page: true
 tags:
     chamber: true
 ---

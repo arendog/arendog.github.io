@@ -5,12 +5,18 @@ const modules = import.meta.glob('$lib/content/*.svx', {
 	eager: true
 }) satisfies Record<string, WorkModule>;
 
-export function load({ params }) {
-	const work = Object.values(modules).find((module: WorkModule) => module.metadata.slug === params.slug);
 
-	if (!work) {
-		throw error(404);
+
+export function load({ params }) {
+	const entry = Object.entries(modules).find(
+		([path]) => path.split('/').pop()!.replace('.svx', '') === params.slug
+	);
+
+	if (!entry) {
+		throw error(404, 'Work not found');
 	}
+
+	const [, work] = entry;
 
 	return {
 		metadata: work.metadata,

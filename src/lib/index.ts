@@ -1,7 +1,6 @@
 import type { Component } from 'svelte';
 
 export interface WorkMetadata {
-	slug: string;
 	title: string;
 	date: string;
 	performances: string[];
@@ -34,4 +33,8 @@ export interface WorkMetadata {
 export interface WorkModule {
 	metadata: WorkMetadata;
 	default: Component;
+}
+
+export interface WorkSummary extends WorkMetadata {
+	slug: string;
 }
