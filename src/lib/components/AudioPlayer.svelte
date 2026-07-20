@@ -53,15 +53,22 @@
 	});
 
 	function pauseButton(): void {
-		// Uses slightly hacky short circuit evaluation to trigger play if the duration has been set, i.e. audio decoded
-		wavesurfer.isPlaying() ? wavesurfer.pause() : formattedDuration != '' && wavesurfer.play();
+		if (wavesurfer.isPlaying()) {
+			wavesurfer.pause()
+		} else if (formattedDuration != '') {
+			wavesurfer.play();
+		}
 		playing = wavesurfer.isPlaying();
 	}
 
 	function muteButton(): void {
-		volume
-			? ((unmuteVolume = volume), (volume = 0))
-			: ((volume = unmuteVolume), (unmuteVolume = 0.75));
+		if (volume) {
+			unmuteVolume = volume;
+			volume = 0;
+		} else {
+			volume = unmuteVolume;
+			unmuteVolume = 0.75;
+		}
 	}
 
 	const formatTime = (seconds: number) => {

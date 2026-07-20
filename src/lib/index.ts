@@ -1,3 +1,5 @@
+import type { Component } from 'svelte';
+
 export interface WorkMetadata {
 	slug: string;
 	title: string;
@@ -27,4 +29,9 @@ export interface WorkMetadata {
 
 	listed: boolean;
 	page: boolean;
+}
+
+export interface WorkModule {
+	metadata: WorkMetadata;
+	default: Component;
 }

@@ -1,15 +1,12 @@
 import { error } from '@sveltejs/kit';
-import type { WorkMetadata } from '$lib';
+import type { WorkModule } from '$lib';
 
 const modules = import.meta.glob('$lib/content/*.svx', {
 	eager: true
-});
+}) satisfies Record<string, WorkModule>;
 
 export function load({ params }) {
-	const work = Object.values(modules).find((m: any) => {
-		const metadata = m.metadata as WorkMetadata;
-		return metadata.slug === params.slug;
-	}) as any;
+	const work = Object.values(modules).find((module: WorkModule) => module.metadata.slug === params.slug);
 
 	if (!work) {
 		throw error(404);
