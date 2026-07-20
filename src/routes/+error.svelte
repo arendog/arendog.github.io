@@ -1,0 +1,26 @@
+<script lang="ts">
+	import '../app.css';
+	import { page } from '$app/state';
+	import Nav from '$lib/components/Nav.svelte';
+</script>
+
+<svelte:head>
+	<title>{page.status} Error</title>
+</svelte:head>
+
+<div
+	class="mx-[max(calc(50%-200px),16px)] mb-8 max-w-100 min-w-60 lg:mx-[calc(50%-400px)] lg:max-w-200"
+>
+	<Nav />
+	<div class="error">
+		<h1 class="text-black">{page.status}: {page.error?.message} ☹</h1>
+		<p class="my-0 text-sm text-black">
+			{#if page.status == 404}
+				Oh, no! This page doesn’t seem to exist.
+			{:else if page.status == 403}
+				Oh, no! You probably shouldn’t be here.
+			{/if}
+			Return <a rel="external" href="/" class="text-primary hover:underline">home</a>.
+		</p>
+	</div>
+</div>
