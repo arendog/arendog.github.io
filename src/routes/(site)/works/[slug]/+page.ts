@@ -12,7 +12,11 @@ export function load({ params }) {
 		([path]) => path.split('/').pop()!.replace('.svx', '') === params.slug
 	);
 
+	
+
 	if (!entry) {
+		throw error(404, 'Work not found');
+	} else if (!entry[1].metadata.page) {
 		throw error(404, 'Work not found');
 	}
 

@@ -11,7 +11,7 @@ banner_img: {url: 'https://press.christies.com/wp-content/uploads/2024/02/7c4fd3
 audio: {url: '', peaks_url: '', caption: ''}
 score: {url: '', caption: ''}
 listed: false
-page: true
+page: false
 tags:
     chamber: true
 ---
