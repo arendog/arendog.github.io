@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>about - Alex Rennie</title>
+</svelte:head>
+
 <div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-20">
 	<div>
 		<enhanced:img alt="placeholder" src="/static/images/placeholder.webp" />

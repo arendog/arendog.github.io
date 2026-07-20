@@ -1,13 +1,5 @@
-<script lang="ts">
-	import { page } from '$app/state';
-</script>
-
-<svelte:head>
-	<title>{page.status} Error</title>
-</svelte:head>
-
 <div class="error">
-	<h1 class="text-black">404: not found ☹</h1>
+	<h1 class="text-black">404: page not found ☹</h1>
 	<p class="my-0 text-sm text-black">
 		Oh, no! This page doesn’t seem to exist. Return <a
 			rel="external"

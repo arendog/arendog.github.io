@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>contact - Alex Rennier</title>
+</svelte:head>
+
 <h1>contact</h1>
 
 <p class="mt-4">

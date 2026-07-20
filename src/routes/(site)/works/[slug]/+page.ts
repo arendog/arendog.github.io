@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { WorkModule } from '$lib';
 
-const modules = import.meta.glob('$lib/content/*.svx', {
+const modules = import.meta.glob('$lib/content/works/*.svx', {
 	eager: true
 }) satisfies Record<string, WorkModule>;
 
