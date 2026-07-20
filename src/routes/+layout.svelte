@@ -6,6 +6,7 @@
 </script>
 
 <svelte:head>
+	<link href="/404" />
 	<link rel="icon" href={favicon} />
 	<meta name="description" content="Website of composer and saxophonist Alex Rennie." />
 	<meta name="keywords" content="composition, saxophone, piano, jazz, classical" />
