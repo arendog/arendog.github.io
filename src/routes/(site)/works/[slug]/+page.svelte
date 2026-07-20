@@ -29,17 +29,39 @@
 </svelte:head>
 
 <div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-12">
-	<div class="flex flex-col items-center gap-8">
+	<div class="flex flex-col items-center gap-6">
 		{#if work.banner_img.url}
 			<div>
 				<img src={work.banner_img.url} alt={work.banner_img.alt} />
-				<p class="my-1 text-left italic">{work.banner_img.caption}</p>
+				<p class="mt-1 text-left italic">{work.banner_img.caption}</p>
 			</div>
+		{/if}
+
+		{#if work.audio.url}
+			{#if work.audio.peaks_url}
+				{#await peaksPromise}
+					<p class="text-darkgrey my-1 text-sm italic">Loading audio peaks...</p>
+				{:then peaks}
+					<AudioPlayer
+						audio_url={work.audio.url}
+						audio_peaks={peaks || undefined}
+						audio_caption={work.audio.caption}
+					/>
+				{:catch error}
+					console.log(Error loading audio data: {error.message});
+				{/await}
+			{:else}
+				<AudioPlayer
+					audio_url={work.audio.url}
+					audio_peaks={undefined}
+					audio_caption={work.audio.caption}
+				/>
+			{/if}
 		{/if}
 
 		{#if work.score.url}
 			<a
-				class="flex items-center gap-2 link-button"
+				class="flex justify-center gap-2 link-button px-4"
 				rel="external"
 				target="_blank"
 				href={work.score.url}
@@ -65,28 +87,6 @@
 				</svg>
 			</a>
 			<!-- <embed type="application/pdf" class="w-full aspect-[1]" src={work.score.url + "#toolbar=0&navpanes=0"}> -->
-		{/if}
-
-		{#if work.audio.url}
-			{#if work.audio.peaks_url}
-				{#await peaksPromise}
-					<p class="text-darkgrey my-1 text-sm italic">Loading audio peaks...</p>
-				{:then peaks}
-					<AudioPlayer
-						audio_url={work.audio.url}
-						audio_peaks={peaks || undefined}
-						audio_caption={work.audio.caption}
-					/>
-				{:catch error}
-					console.log(Error loading audio data: {error.message});
-				{/await}
-			{:else}
-				<AudioPlayer
-					audio_url={work.audio.url}
-					audio_peaks={undefined}
-					audio_caption={work.audio.caption}
-				/>
-			{/if}
 		{/if}
 	</div>
 
