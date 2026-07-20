@@ -1,0 +1,17 @@
+---
+slug: flotsam-jetsam
+title: flotsam / jetsam
+date: 2026-01-20
+performances: ['2024-02-24']
+caption: for the Bozzini Quartet
+movements: ['']
+instrumentation: string quartet
+duration: 7'
+banner_img: {url: '/images/flotsambanner.png', alt: '', caption: ''}
+audio: {url: '/audio/flotsam-jetsam.mp3', peaks_url: '/audio/flotsam-jetsam-peaks.json', caption: 'Excerpt from flotsam / jetsam, Bozzini Quartet'}
+score: {url: '/documents/flotsam-jetsam.pdf', caption: 'Score excerpt'}
+listed: true
+page: true
+tags:
+    chamber: true
+---

@@ -11,6 +11,4 @@
 	<meta name="keywords" content="composition, saxophone, piano, jazz, classical" />
 </svelte:head>
 
-
 {@render children()}
-
