@@ -4,10 +4,14 @@ const modules = import.meta.glob('$lib/content/*.svx', {
 	eager: true
 }) satisfies Record<string, WorkModule>;
 
+function slugFromPath(path: string) {
+	return path.split('/').pop()!.replace('.svx', '');
+}
+
 export function load() {
 	const works: WorkSummary[] = (Object.entries(modules) as [string, WorkModule][])
 		.map(([path, module]) => ({
-			slug: path.split('/').pop()!.replace('.svx', ''),
+			slug: slugFromPath(path),
 			...module.metadata
 		}))
 		.filter((work) => work.listed)

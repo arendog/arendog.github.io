@@ -14,17 +14,17 @@ const works = Object.fromEntries(
 );
 
 export function entries() {
-	return Object.keys(works).map((slug) => ({
-		slug
-	}));
+	return Object.entries(works)
+		.filter(([, work]) => work.metadata.page)
+		.map(([slug]) => ({
+			slug
+		}));
 }
 
 export function load({ params }) {
 	const work = works[params.slug];
 
-	if (!work) {
-		throw error(404, 'Work not found');
-	} else if (!work.metadata.page) {
+	if (!work || !work.metadata.page) {
 		throw error(404, 'Work not found');
 	}
 	return {
