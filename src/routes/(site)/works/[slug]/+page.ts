@@ -5,23 +5,26 @@ const modules = import.meta.glob('$lib/content/*.svx', {
 	eager: true
 }) satisfies Record<string, WorkModule>;
 
+function slugFromPath(path: string) {
+	return path.split('/').pop()!.replace('.svx', '');
+}
 
+const works = Object.fromEntries(
+	Object.entries(modules).map(([path, module]) => [slugFromPath(path), module])
+);
+
+export function entries() {
+	return Object.keys(works).map((slug) => ({
+		slug
+	}));
+}
 
 export function load({ params }) {
-	const entry = Object.entries(modules).find(
-		([path]) => path.split('/').pop()!.replace('.svx', '') === params.slug
-	);
+	const work = works[params.slug];
 
-	
-
-	if (!entry) {
-		throw error(404, 'Work not found');
-	} else if (!entry[1].metadata.page) {
+	if (!work) {
 		throw error(404, 'Work not found');
 	}
-
-	const [, work] = entry;
-
 	return {
 		metadata: work.metadata,
 		Content: work.default

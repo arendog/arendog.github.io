@@ -54,7 +54,7 @@
 
 	function pauseButton(): void {
 		if (wavesurfer.isPlaying()) {
-			wavesurfer.pause()
+			wavesurfer.pause();
 		} else if (formattedDuration != '') {
 			wavesurfer.play();
 		}
