@@ -1,5 +1,4 @@
 ---
-slug: antipodes
 title: Antipodes
 date: 2025-09-25
 performances: ['']
@@ -7,7 +6,7 @@ caption: 'BBC Young Composer — highly commended'
 movements: ['']
 instrumentation: orchestra
 duration: 4'
-banner_img: {url: '/images/antipodesbanner.jpg', alt: 'South Bay of Antipodes Island, New Zealand', caption: 'Antipodes Island South Bay (LawrieM — public domain)'}
+banner_img: {url: '/images/antipodesbanner.webp', alt: 'South Bay of Antipodes Island, New Zealand', caption: 'Antipodes Island South Bay (LawrieM — public domain)'}
 audio: {url: '', peaks_url: '', caption: ''}
 score: {url: '/documents/antipodes.pdf', caption: 'Full score'}
 listed: true

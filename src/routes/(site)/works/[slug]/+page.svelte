@@ -96,7 +96,11 @@
 			{#if work.caption}
 				<p class="text-left text-base leading-5 italic">{work.caption}</p>
 			{/if}
-			<p class="text-left text-sm leading-4">{work.instrumentation} / {work.duration}</p>
+			<div class="flex flex-wrap gap-x-4">
+				<p class="text-left text-sm leading-4">{work.instrumentation}</p>
+				<p class="text-left text-sm leading-4">/</p>
+				<p class="text-left text-sm leading-4">{work.duration}</p>
+			</div>
 		</div>
 		<Content />
 	</div>

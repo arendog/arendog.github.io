@@ -1,0 +1,16 @@
+---
+title: Lazarus
+date: 2026-09-25
+performances: []
+caption: ''
+movements: []
+instrumentation: chamber opera in one act
+duration: 25'
+banner_img: {url: '/images/schoenberg-red-gaze.webp', alt: 'Expressionist painting of distorted face with piercing red gaze', caption: 'Red Gaze by Arnold Schoenberg'}
+audio: {url: '', peaks_url: '', caption: ''}
+score: {url: '', caption: ''}
+listed: true
+page: true
+tags:
+    orchestral: true
+---

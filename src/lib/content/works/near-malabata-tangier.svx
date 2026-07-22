@@ -1,5 +1,4 @@
 ---
-slug: near-malabata-tangier 
 title: near Malabata, Tangier
 date: 2026-08-02
 performances: ['']
