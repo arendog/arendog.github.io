@@ -8,6 +8,21 @@
 	// svelte-ignore state_referenced_locally
 	const work = data.metadata;
 
+	const months = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	];
+
 	async function loadPeaks(url: string) {
 		if (url) {
 			const response = await fetch(url);
@@ -34,6 +49,22 @@
 			<div>
 				<img src={work.banner_img.url} alt={work.banner_img.alt} />
 				<p class="mt-1 text-left italic">{work.banner_img.caption}</p>
+			</div>
+		{/if}
+
+		{#if work.performances.length}
+			<div class="flex w-full flex-col gap-2">
+				<h2 class="leading-8">performances</h2>
+				{#each work.performances as performance (performance.date)}
+					<div class="flex flex-col gap-1">
+						<p class="text-left text-sm font-bold">
+							{new Date(performance.date).getDay()}
+							{months[new Date(performance.date).getMonth()]}
+							{new Date(performance.date).getFullYear()}
+						</p>
+						<p class="ml-3 text-left leading-4">{performance.performers}; {performance.location}</p>
+					</div>
+				{/each}
 			</div>
 		{/if}
 

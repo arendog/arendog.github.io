@@ -3,7 +3,11 @@ import type { Component } from 'svelte';
 export interface WorkMetadata {
 	title: string;
 	date: string;
-	performances: string[];
+	performances: {
+		date: string;
+		performers: string;
+		location: string;
+	}[];
 	caption: string;
 	movements: string[];
 	instrumentation: string;

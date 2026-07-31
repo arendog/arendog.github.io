@@ -26,6 +26,13 @@
 				'/works'
 			)}">works</a
 		>
+		<!-- <a
+			rel="external"
+			href="/jazz"
+			class="w-min py-1 text-center font-syne-tactile text-2xl link-no-decoration {currentPageCircle(
+				'/jazz'
+			)}">jazz</a
+		> -->
 		<a
 			rel="external"
 			href="/contact"
