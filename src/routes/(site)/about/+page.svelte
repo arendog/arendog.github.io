@@ -6,21 +6,23 @@
 	<div>
 		<enhanced:img alt="placeholder" src="/static/images/placeholder.webp" />
 		<div class="mt-20 ml-12 flex flex-col gap-16">
-			<div>
+			<!-- <div>
 				<p class="italic">“Cwm fjord veg balks nth pyx quiz.”</p>
 				<p class="pt-2 text-right">—Reference no. 1</p>
 			</div>
 			<div>
 				<p class="italic">“Schwarzkopf vexed Iraq big-time in July.”</p>
 				<p class="pt-2 text-right">—Reference no. 2</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<div class="mt-16 lg:mt-30">
 		<div class="flex flex-col gap-4">
-			<h1>about</h1>
+			<h1>Website under construction...</h1>
 
-			<p>
+			<p>Check out some of my <a rel="external" href="/works">works</a>.</p>
+
+			<!-- <p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris nisl, imperdiet a
 				risus sit amet, pellentesque hendrerit eros. Cras nunc massa, posuere sit amet ipsum ut,
 				consequat sodales libero. Proin accumsan ligula sem. Aenean at elementum risus. Sed
@@ -59,7 +61,7 @@
 				tortor. Sed turpis lectus, consectetur sed justo eu, faucibus feugiat neque. Phasellus quis
 				erat eu ligula dictum molestie. Quisque interdum, mi ac eleifend mollis, diam urna suscipit
 				odio, quis posuere purus ligula id tortor.
-			</p>
+			</p> -->
 		</div>
 	</div>
 </div>

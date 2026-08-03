@@ -10,8 +10,8 @@
 
 <div class="my-8 flex flex-col">
 	{#each data.works as work, i (work.slug)}
-		<div class="flex gap-12 font-syne-mono lg:gap-16">
-			<div class="flex w-12 flex-col items-center gap-0.5">
+		<div class="flex gap-8 font-syne-mono lg:gap-16">
+			<div class="flex min-w-12 flex-col items-center gap-0.5">
 				{#if i > 0}
 					{#if new Date(work.date).getFullYear() != new Date(data.works[i - 1].date).getFullYear()}
 						<h2>{new Date(work.date).getFullYear()}</h2>
@@ -22,18 +22,18 @@
 					<h2>{new Date(work.date).getFullYear()}</h2>
 				{/if}
 				{#if i != data.works.length - 1}
-					<div class="w-0 grow border"></div>
+					<div class="w-0 grow rounded-full border"></div>
 				{/if}
 			</div>
-			<div class="flex flex-col pb-4">
+			<div class="flex flex-col gap-1 pb-4">
 				{#if work.page}
 					<a href="/works/{work.slug}" rel="external" class="">
-						<h2 class="text-lg transition hover:translate-x-1">
+						<h2 class="text-lg leading-6 transition hover:translate-x-1">
 							{work.title}
 						</h2>
 					</a>
 				{:else}
-					<h2 class="text-lg">
+					<h2 class="text-lg leading-6">
 						{work.title}
 					</h2>
 				{/if}

@@ -12,5 +12,5 @@ score: {url: '', caption: ''}
 listed: true
 page: false
 tags:
-    chamber: true
+    solo-chamber: true
 ---

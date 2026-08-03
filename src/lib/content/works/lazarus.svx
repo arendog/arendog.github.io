@@ -1,6 +1,6 @@
 ---
 title: Lazarus
-date: 2026-09-25
+date: 2026-12-25
 performances: []
 caption: ''
 movements: []
@@ -10,7 +10,7 @@ banner_img: {url: '/images/schoenberg-red-gaze.webp', alt: 'Expressionist painti
 audio: {url: '', peaks_url: '', caption: ''}
 score: {url: '', caption: ''}
 listed: true
-page: true
+page: false
 tags:
-    orchestral: true
+    opera: true
 ---

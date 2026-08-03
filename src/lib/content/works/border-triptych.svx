@@ -1,0 +1,16 @@
+---
+title: Border Triptych
+date: 2025-06-07
+performances: [{date: '2025-06-07', performers: '', location: ''}]
+caption: ''
+movements: ['']
+instrumentation: Northumbrian smallpipes in ‘G’, mixed ensemble
+duration: 4'30"
+banner_img: {url: '', alt: '', caption: ''}
+audio: {url: '', peaks_url: '', caption: ''}
+score: {url: '', caption: ''}
+listed: true
+page: false
+tags:
+    solo-chamber: true
+---

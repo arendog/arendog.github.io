@@ -42,3 +42,11 @@ export interface WorkModule {
 export interface WorkSummary extends WorkMetadata {
 	slug: string;
 }
+
+// export interface WorkTags {
+// 	orchestral: boolean;
+// 	solo-chamber: boolean;
+// 	vocal-choral: boolean;
+// 	opera: boolean;
+// 	electronics: boolean;
+// }

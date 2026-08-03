@@ -12,7 +12,7 @@ score: {url: '', caption: ''}
 listed: true
 page: true
 tags:
-    chamber: true
+    solo-chamber: true
 ---
 
 Written as part of Sound and Music's In the Making program for resident ensemble standard issue, over a three day period. Premiered on 2<sup>nd</sup> August 2024, Richard Steinitz Building, University of Huddersfield.
