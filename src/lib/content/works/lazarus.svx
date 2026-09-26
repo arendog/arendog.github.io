@@ -5,7 +5,7 @@ performances: []
 caption: ''
 movements: []
 instrumentation: chamber opera in one act
-duration: 45'
+duration: 35'
 banner_img: {url: '/images/schoenberg-red-gaze.webp', alt: 'Expressionist painting of distorted face with piercing red gaze', caption: 'Red Gaze by Arnold Schoenberg'}
 audio: {url: '', peaks_url: '', caption: ''}
 score: {url: '', caption: ''}

@@ -4,8 +4,8 @@
 
 	const INC_FAST_SPEED = 0.1;
 	const INC_SLOW_SPEED = 0.02;
-	const AMPLITUDE_X = 1;
-	const AMPLITUDE_Y = 1;
+	const AMPLITUDE_X = 1.2;
+	const AMPLITUDE_Y = 1.2;
 
 	const sketch: Sketch = (p) => {
 		let fontTactile: p5.Font;

@@ -8,9 +8,9 @@ instrumentation: orchestra
 duration: 4'
 banner_img: {url: '/images/antipodesbanner.webp', alt: 'South Bay of Antipodes Island, New Zealand', caption: 'Antipodes Island South Bay (LawrieM — public domain)'}
 audio: {url: '', peaks_url: '', caption: ''}
-score: {url: '/documents/antipodes.pdf', caption: 'Full score'}
+score: {url: '', caption: ''}
 listed: true
-page: true
+page: false
 tags:
     orchestral: true
 ---

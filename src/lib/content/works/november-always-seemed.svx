@@ -1,18 +1,18 @@
 ---
 title: November always seemed to be the Norway of the year
-date: 2026-11-01
-performances: []
-caption: ''
-movements: []
-instrumentation: SATB + SATB
-duration: 4'
+date: 2026-10-30
+performances: [{date: '2026-10-30', performers: 'Peter Sheppard Skærved', location: 'West Road Concert Hall, Cambridge'}]
+caption: for Peter Sheppard Skærved
+movements: ['']
+instrumentation: solo violin
+duration: 3'
 banner_img: {url: '', alt: '', caption: ''}
 audio: {url: '', peaks_url: '', caption: ''}
 score: {url: '', caption: ''}
 listed: true
 page: false
 tags:
-    vocal-choral: true
+    solo-chamber: true
 ---
 
 Text by Emily Dickinson (extract from letter to Elizabeth Holland, early November 1865, L311).
