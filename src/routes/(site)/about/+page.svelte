@@ -4,7 +4,7 @@
 
 <div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-20">
 	<div>
-		<enhanced:img alt="placeholder" src="/static/images/placeholder.webp" />
+		<enhanced:img alt="placeholder" src="/images/placeholder.webp" />
 		<div class="mt-20 ml-12 flex flex-col gap-16">
 			<!-- <div>
 				<p class="italic">“Cwm fjord veg balks nth pyx quiz.”</p>
