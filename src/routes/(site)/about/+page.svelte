@@ -4,8 +4,8 @@
 
 <div class="mt-12 lg:grid lg:grid-cols-2 lg:gap-20">
 	<div>
-		<enhanced:img alt="placeholder" src="/static/images/placeholder.webp" />
-		<div class="mt-20 ml-12 flex flex-col gap-16">
+		<img alt="placeholder" src="images/placeholder.webp" />
+		<div class="mt-20 ml-8 flex flex-col gap-16">
 			<!-- <div>
 				<p class="italic">“Cwm fjord veg balks nth pyx quiz.”</p>
 				<p class="pt-2 text-right">—Reference no. 1</p>
@@ -23,6 +23,8 @@
 			<p>Check out some of my <a rel="external" href="/works">works</a>.</p>
 
 			<!-- <p>
+				<img alt="portrait" src="images/portrait-colour.webp" class="w-30 float-right ml-4 mb-2">
+				<b>Alex Rennie</b> (2006–) is a composer of contemporary classical music and opera. He is also a jazz saxophonist and keyboardist.
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris nisl, imperdiet a
 				risus sit amet, pellentesque hendrerit eros. Cras nunc massa, posuere sit amet ipsum ut,
 				consequat sodales libero. Proin accumsan ligula sem. Aenean at elementum risus. Sed
